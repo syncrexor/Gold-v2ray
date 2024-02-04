@@ -1,0 +1,97 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/customColorGoldDeepDark</item>
+        <item name="colorPrimaryDark">@color/customColorGoldDeepDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorMainBg">@color/customColorGoldDeepDark</item>
+        <item name="colorMainText">@color/colorText</item>
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/customColorGoldDeepDark</item>
+        <item name="android:navigationBarColor">@color/customColorGoldDeepDark</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorBg</item>
+        <item name="android:textColorPrimary">@color/colorText</item>
+        <item name="android:textColorSecondary">@color/customColorGoldDark</item>
+        <item name="android:textColorTertiary">@color/customColorGoldLight</item>
+        <item name="actionMenuTextColor">@color/customColorGold</item>
+        <item name="android:titleTextStyle">@style/ActionBarTitleText</item>
+        <item name="android:titleTextAppearance">@style/ActionBarTitleText</item>
+        <item name="android:actionMenuTextColor">@color/customColorGold</item>
+        <item name="colorSurface">@color/customColorGold</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_back</item>
+        <item name="homeAsUpIndicator">@drawable/ic_back</item>
+        <item name="android:colorControlNormal">@color/customColorGold</item>
+        <item name="actionOverflowMenuStyle">@style/CMOptionsMenu</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="actionBarStyle">@style/Widget.MaterialComponents.ActionBar.Primary</item>
+    </style>
+
+    <style name="AppThemeDayNight.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Translucent">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="ToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/customColorGold</item>
+    </style>
+
+    <style name="ActionBarTitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="AppTheme.PopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@color/customColorGoldDeepDark</item>
+        <item name="android:textColor">@color/customColorGold</item>
+    </style>
+    <style name="AppTheme.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="actionOverflowMenuStyle">@style/AppTheme.PopupMenu</item>
+    </style>
+
+    <style name="NavigationViewStyle">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner.DropDown">
+        <item name="android:popupBackground">@color/customColorGoldDeepDark</item>
+        <item name="android:textColor">@color/customColorGold</item>
+        <item name="android:textColorPrimary">@color/customColorGold</item>
+        <item name="android:textColorSecondary">@color/customColorGold</item>
+        <item name="android:dropDownSelector">@color/customColorGold</item>
+        <item name="android:color">@color/customColorGold</item>
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/customColorGoldDeepDark</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_animated</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="postSplashScreenTheme">@style/AppTheme.NoActionBar</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@color/customColorGoldDeepDark</item>
+        <item name="android:textColorPrimary">@color/customColorGold</item>
+        <item name="android:textColorSecondary">@color/customColorGold</item>
+        <item name="android:colorAccent">@color/customColorGoldDark</item>
+    </style>
+
+    <style name="CMOptionsMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:popupBackground">@color/customColorGoldDeepDark</item>
+    </style>
+
+    <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/customColorGold</item>
+    </style>
+
+</resources>
