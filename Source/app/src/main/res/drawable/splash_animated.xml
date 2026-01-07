@@ -10,14 +10,14 @@
             android:viewportHeight="289">
             <group
                 android:name="group"
-                android:pivotX="144"
-                android:pivotY="144"
-                android:scaleX="0.75"
-                android:scaleY="0.75">
+                android:pivotX="115"
+                android:pivotY="110"
+                android:scaleX="0.22"
+                android:scaleY="0.22">
                 <path
-                    android:name="path_2"
-                    android:pathData="M 235.883 192.258 C 194.963 204.55 169.222 186.635 169.222 186.635 L 188.441 129.989 L 217.068 129.989 L 217.068 150.398 L 194.04 150.398 L 194.04 172.429 C 202.523 176.662 214.816 174.633 214.816 174.633 C 214.816 174.633 245.522 172.313 241.424 132.888 C 237.269 93.52 195.367 100.014 195.367 100.014 L 157.216 211.217 L 130.668 211.217 L 92.518 100.014 C 92.518 100.014 50.617 93.52 46.461 132.888 C 42.364 172.313 73.068 174.633 73.068 174.633 C 73.068 174.633 85.361 176.662 93.846 172.429 L 93.846 150.398 L 70.816 150.398 L 70.816 129.989 L 99.444 129.989 L 118.663 186.635 C 118.663 186.635 92.921 204.55 52.002 192.258 C 52.002 192.258 17.256 182.518 19.392 134.685 C 19.392 134.685 20.836 69.4 98.751 79.605 C 98.751 79.605 111.564 82.272 114.393 84.07 L 143.942 185.359 L 173.493 84.07 C 176.32 82.272 189.133 79.605 189.133 79.605 C 267.05 69.4 268.492 134.685 268.492 134.685 C 270.57 182.518 235.883 192.258 235.883 192.258 Z"
-                    android:fillColor="#594626"
+                    android:name="path"
+                    android:pathData="M400.71,209c0,1.48.71,111.05-.07,4.44,0,0,1,99.75,1.14,209.21,0,3.15,0,4.41-1.29,6.64,0,0-4.14,4.53-6.19,6.81-18.08,20.04-37.26,39.86-57.12,57.88l-159.02.06c-61.86-6.51-112.98-53.48-113.51-116.49-.67-80.69.56-164.3,0-244.09.1-64.98,56.62-112.16,121.5-115.5l262.54.05-4.34,5.12-83.36,82.67-169.78.22c-19.75,1.29-36.19,15.52-38.55,35.45v230.08c2.41,17.28,15.59,30.35,32.62,33.38,41.77-.58,83.63.8,125.38.67,1.17,0,1.29-.07,2.04-1.09v-108.5h-126.5c-.57,0-1.2-.08-3.4,0l81.4-87h136.51Z"
+                    android:fillColor="#878787"
                     android:strokeWidth="1"/>
             </group>
         </vector>
@@ -33,7 +33,7 @@
                 android:interpolator="@android:interpolator/fast_out_slow_in"/>
         </aapt:attr>
     </target>
-    <target android:name="path_2">
+    <target android:name="path">
         <aapt:attr name="android:animation">
             <set>
                 <objectAnimator
@@ -43,14 +43,6 @@
                     android:valueTo="1"
                     android:valueType="floatType"
                     android:interpolator="@android:interpolator/fast_out_slow_in"/>
-                <!--<objectAnimator
-                    android:propertyName="rotation"
-                    android:startOffset="250"
-                    android:duration="350"
-                    android:valueFrom="0"
-                    android:valueTo="360"
-                    android:valueType="floatType"
-                    android:interpolator="@android:interpolator/fast_out_slow_in"/>-->
             </set>
         </aapt:attr>
     </target>

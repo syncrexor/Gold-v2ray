@@ -17,8 +17,8 @@
 
             <Spinner
                 android:id="@+id/sp_subscriptionId"
-                style="@style/SpinnerStyle"
-                android:textColor="@color/customColorInputs"
+                style="@style/Spinners"
+                android:textColor="@color/colorText"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/edit_height"/>
         </LinearLayout>
@@ -39,7 +39,7 @@
             <EditText
                 android:id="@+id/et_keyword"
                 android:layout_width="match_parent"
-                android:textColor="@color/customColorInputs"
+                android:textColor="@color/colorText"
                 android:layout_height="@dimen/edit_height"
                 android:inputType="text" />
         </LinearLayout>

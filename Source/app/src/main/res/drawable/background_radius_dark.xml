@@ -6,6 +6,6 @@
         android:topLeftRadius="15dp"
         android:topRightRadius="15dp" />
 
-    <solid android:color="@color/customColorGoldDeepDark" />
+    <solid android:color="@color/colorBackground" />
 
 </shape>

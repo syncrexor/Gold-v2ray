@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+        <!-- Backgrounds -->
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:statusBarColor">@color/colorBackground</item>
+        <item name="colorPrimary">@color/colorBackground</item>
+        <item name="colorPrimaryDark">@color/colorBackground</item>
+        <item name="colorMainBg">@color/colorBackground</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
+        <!-- Texts -->
+        <item name="colorMainText">@color/colorText</item>
+        <item name="android:textColorPrimary">@color/colorText</item>
+        <item name="actionMenuTextColor">@color/colorText</item>
+        <item name="android:actionMenuTextColor">@color/colorText</item>
+        <item name="colorOnPrimary">@color/colorText</item>
+        <item name="colorSurface">@color/colorText</item>
+        <item name="colorOnSurface">@color/colorText</item>
+        <item name="android:textColorSecondary">@color/colorTextLight</item>
+        <item name="android:textColorTertiary">@color/colorTextLighter</item>
+        <!-- Icons and Accents -->
+        <item name="colorControlNormal">@color/colorIcon</item>
+        <item name="android:colorControlNormal">@color/colorIcon</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSecondary">@color/colorAccent</item>
+        <!-- Others -->
+        <item name="android:titleTextStyle">@style/ActionBarTitleText</item>
+        <item name="android:titleTextAppearance">@style/ActionBarTitleText</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenus</item>
+        <item name="actionOverflowButtonStyle">@style/OverflowButtons</item>
+        <item name="actionBarStyle">@style/Widget.MaterialComponents.ActionBar.Primary</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_back</item>
+        <item name="homeAsUpIndicator">@drawable/ic_back</item>
+        <item name="toolbarStyle">@style/Toolbar</item>
+        <item name="buttonBarPositiveButtonStyle">@style/DialogButtons</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DialogButtons</item>
+        <item name="buttonBarNeutralButtonStyle">@style/DialogButtons</item>
+
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+    </style>
+
+    <style name="AppThemeDayNight.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.NoActionBar.Translucent" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="AppTheme.PopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@color/colorBackground</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+    <style name="AppTheme.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="actionOverflowMenuStyle">@style/AppTheme.PopupMenu</item>
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/colorBackground</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_animated</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="postSplashScreenTheme">@style/AppTheme.NoActionBar</item>
+    </style>
+
+    <style name="ToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="ActionBarTitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="NavigationView">
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="Spinners" parent="Widget.AppCompat.Spinner.DropDown">
+        <item name="android:popupBackground">@color/colorBackground</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textColorPrimary">@color/colorTextLighter</item>
+        <item name="android:textColorSecondary">@color/colorTextLight</item>
+        <item name="android:dropDownSelector">@color/colorIcon</item>
+        <item name="android:color">@color/colorIconLight</item>
+    </style>
+
+    <style name="OverflowMenus" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:popupBackground">@color/colorBackground</item>
+    </style>
+
+    <style name="OverflowButtons" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/colorIcon</item>
+    </style>
+
+    <style name="Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/colorBackground</item>
+        <item name="titleTextColor">@color/colorText</item>
+        <item name="subtitleTextColor">@color/colorTextLight</item>
+    </style>
+
+    <style name="DialogButtons" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="NativeAdsIconRounded">
+        <item name="cornerSize">2dp</item>
+    </style>
+
+</resources>

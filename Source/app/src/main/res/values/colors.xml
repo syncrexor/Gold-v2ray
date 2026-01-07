@@ -1,37 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPing">#009966</color>
-    <color name="colorPingRed">#FF0099</color>
-    <color name="color_fab_orange">#f97910</color>
-
-    <color name="color_switch_fab_grey">#424242</color>
-    <color name="color_fab_grey">#646464</color>
-    <color name="color_secondary">#BDBDBD</color>
-    <color name="colorSelected">@color/themeColorA</color>
-    <color name="colorUnselected">#222222</color>
-    <color name="colorPrimary">#222222</color>
-    <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">@color/themeColorB</color>
-    <color name="colorBg">#000000</color>
-    <color name="colorText">@color/themeColorC</color>
-
-    <color name="customColorBlack">#000000</color>
-    <color name="customColorWhite">#FFFFFF</color>
-    <color name="customColorGray">#272727</color>
-    <color name="customColorGold">@color/themeColorB</color>
-    <color name="customColorGoldDark">@color/themeColorC</color>
-    <color name="customColorGoldLight">@color/themeColorA</color>
-    <color name="customColorGoldDeepDark">@color/themeColorD</color>
-    <color name="customColorIcons">@color/themeColorB</color>
-    <color name="customColorListBGAlphaLeft">@color/themeColorDA</color>
-    <color name="customColorListBGAlphaRight">#E6353431</color>
-    <color name="customColorInputs">@color/themeColorB</color>
-    <color name="customColorTestArea">@color/themeColorEA</color>
-
-    <color name="themeColorA">#FFEB3B</color>
-    <color name="themeColorB">#FFC107</color>
-    <color name="themeColorC">#FF9800</color>
-    <color name="themeColorD">#503D05</color>
-    <color name="themeColorDA">#E6674D00</color>
-    <color name="themeColorEA">#F7674D00</color>
+    <!-- Base -->
+    <color name="colorBase">#FFCC00</color>
+    <color name="colorBaseDark">#FABD31</color>
+    <color name="colorBaseDeep">#FF9800</color>
+    <!-- Background -->
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorBackgroundDark">#F5F4F2</color>
+    <color name="colorBackgroundDarker">#909090</color>
+    <color name="colorBackgroundDeep">#000000</color>
+    <color name="colorBackgroundAlpha">#FAFFFFFF</color>
+    <!-- Text -->
+    <color name="colorText">#000000</color>
+    <color name="colorTextLight">#4E4E4E</color>
+    <color name="colorTextLighter">#8A8A8A</color>
+    <!-- Icon -->
+    <color name="colorIcon">#000000</color>
+    <color name="colorIconLight">#4E4E4E</color>
+    <color name="colorIconGold">#FFCC00</color>
+    <!-- Accent -->
+    <color name="colorAccent">#000000</color>
+    <!-- Button -->
+    <color name="colorButtonBackground">#424242</color>
+    <color name="colorButtonBackgroundLight">#BDBDBD</color>
+    <!-- Ping -->
+    <color name="colorPingGood">#00DC1D</color>
+    <color name="colorPingBad">#FF0000</color>
 </resources>

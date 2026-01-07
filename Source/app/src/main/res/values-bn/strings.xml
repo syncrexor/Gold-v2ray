@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_widget_name">সুইচ</string>
+    <string name="app_tile_name">সুইচ</string>
+    <string name="app_tile_first_use">এই ফিচারটি প্রথম ব্যবহার করা হচ্ছে, সার্ভার যোগ করতে অ্যাপটি ব্যবহার করুন</string>
+    <string name="migration_success">ডেটা স্থানান্তর সফল!</string>
+    <string name="migration_fail">ডেটা স্থানান্তর ব্যর্থ!</string>
+
+    <!-- Notifications -->
+    <string name="notification_action_stop_v2ray">বন্ধ করুন</string>
+    <string name="toast_permission_denied">অনুমতি পাওয়া যাচ্ছে না</string>
+    <string name="toast_permission_denied_notification">বিজ্ঞপ্তির অনুমতি পাওয়া যাচ্ছে না</string>
+    <string name="notification_action_more">আরও দেখতে ক্লিক করুন</string>
+    <string name="toast_services_start">সার্ভিস শুরু করুন</string>
+    <string name="toast_services_stop">সার্ভিস বন্ধ করুন</string>
+    <string name="toast_services_success">সার্ভিস সফলভাবে শুরু হয়েছে</string>
+    <string name="toast_services_failure">সার্ভিস শুরু হতে ব্যর্থ হয়েছে</string>
+
+    <!--ServerActivity-->
+    <string name="title_server">কনফিগারেশন ফাইল</string>
+    <string name="menu_item_add_config">কনফিগারেশন যোগ করুন</string>
+    <string name="menu_item_save_config">কনফিগারেশন সংরক্ষণ করুন</string>
+    <string name="menu_item_del_config">কনফিগারেশন মুছুন</string>
+    <string name="menu_item_import_config_qrcode">QR কোড থেকে কনফিগারেশন আমদানি করুন</string>
+    <string name="menu_item_import_config_clipboard">ক্লিপবোর্ড থেকে কনফিগারেশন আমদানি করুন</string>
+    <string name="menu_item_import_config_manually_vmess">ম্যানুয়ালি টাইপ করুন [VMess]</string>
+    <string name="menu_item_import_config_manually_vless">ম্যানুয়ালি টাইপ করুন [VLESS]</string>
+    <string name="menu_item_import_config_manually_ss">ম্যানুয়ালি টাইপ করুন [Shadowsocks]</string>
+    <string name="menu_item_import_config_manually_socks">ম্যানুয়ালি টাইপ করুন [SOCKS]</string>
+    <string name="menu_item_import_config_manually_http">Type manually[HTTP]</string>
+    <string name="menu_item_import_config_manually_trojan">ম্যানুয়ালি টাইপ করুন [Trojan]</string>
+    <string name="servers">সার্ভার</string>
+    <string name="servers_auto_ping">সার্ভার অটো পিং</string>
+    <string name="other_apps">অন্যান্য অ্যাপস</string>
+    <string name="about">সম্পর্কে</string>
+    <string name="description">বিনামূল্যে সার্ভার সহ v2ray ক্লায়েন্ট</string>
+    <string name="share_app">অ্যাপ শেয়ার করুন</string>
+    <string name="rate_app">অ্যাপকে রেট দিন</string>
+    <string name="error_occurred">একটি ত্রুটি ঘটেছে, অনুগ্রহ করে পরে আবার চেষ্টা করুন৷</string>
+    <string name="support_us">আমাদের সমর্থন</string>
+    <string name="support_tip">আপনি যদি এই অ্যাপটি দরকারী মনে করেন, তাহলে আপনার রেটিং দিয়ে আমাদের সমর্থন করুন</string>
+    <string name="later">পরে</string>
+    <string name="dont_show_again">আবার দেখাবেন না</string>
+    <string name="other_settings">অন্যান্য সেটিংস</string>
+    <string name="ad_tips">পরের বার আপনাকে একটি পূর্ণ-পৃষ্ঠার বিজ্ঞাপন দেখানো হতে পারে, আপনার সমর্থনের জন্য আপনাকে ধন্যবাদ।</string>
+    <string name="share_lock">সার্ভার লক করুন</string>
+    <string name="unlock_sharing">সার্ভার আনলক করুন</string>
+    <string name="enter_new_pin_code">নতুন পিন কোড লিখুন:</string>
+    <string name="repeat_pin_code">পিন কোড পুনরাবৃত্তি করুন:</string>
+    <string name="lock">তালা</string>
+    <string name="unlock">আনলক করুন</string>
+    <string name="cancel">বাতিল করুন</string>
+    <string name="confirm">নিশ্চিত করুন:</string>
+    <string name="share_lock_tip">একটি পিন কোড দিয়ে প্রোফাইল রক্ষা করুন</string>
+    <string name="enter_the_pin_code">পিন কোড লিখুন:</string>
+    <string name="pin_code_error">পিন কোড ত্রুটি</string>
+    <string name="enter_the_pin_codes_completely">সম্পূর্ণভাবে পিন কোড লিখুন</string>
+    <string name="got_it">বুঝেছি</string>
+    <string name="pin_codes_do_not_match">পিন কোড মেলে না</string>
+    <string name="congratulations">অভিনন্দন</string>
+    <string name="lock_sharing_active_tip">প্রোফাইল লক করা এখন সক্রিয় করা হয়েছে, অনুগ্রহ করে আপনার পিন কোড নিরাপদ রাখুন</string>
+    <string name="the_pin_code_is_incorrect">পিন কোডটি ভুল</string>
+    <string name="unlock_sharing_active_tip">প্রোফাইল লক করা এখন নিষ্ক্রিয় করা হয়েছে</string>
+    <string name="free_servers_update">বিনামূল্যে সার্ভার আপডেট</string>
+    <string name="free_servers_updated_successfully">বিনামূল্যে সার্ভার সফলভাবে আপডেট করা হয়েছে.</string>
+    <string name="update_failed">আপডেট ব্যর্থ হয়েছে</string>
+    <string name="update_failed_tip">ফ্রি সার্ভার আপডেট করার সময় একটি ত্রুটি ঘটেছে৷ আপনি যদি অন্য VPN ব্যবহার করেন তাহলে অনুগ্রহ করে এটি নিষ্ক্রিয় করুন। অনুগ্রহ করে পরে আবার চেষ্টা করুন বা অ্যাপ সমর্থনের সাথে যোগাযোগ করুন।</string>
+    <string name="free_servers_try_tip">একটি সার্ভারের সাথে সংযোগ করার পরে, সক্রিয় সার্ভার নির্ধারণ করতে গতি পরীক্ষা বোতাম টিপুন</string>
+    <string name="connect_to_a_server_first">প্রথমে একটি সার্ভারের সাথে সংযোগ করুন</string>
+    <string name="connect_to_a_server_first_and_test">প্রথমে, একটি সার্ভারের সাথে সংযোগ করুন এবং একটি গতি পরীক্ষা করুন</string>
+    <string name="please_wait">অনুগ্রহ করে অপেক্ষা করুন...</string>
+    <string name="please_wait_tip">আপডেটে কয়েক মিনিট সময় লাগতে পারে</string>
+    <string name="store_mode_active_tip">দোকান মোড সক্রিয় করা হয়েছে. এই ক্ষেত্রে, সার্ভার লক করার পাশাপাশি, বিনামূল্যে সার্ভার আপডেট করার সম্ভাবনাও নিষ্ক্রিয় করা হয়। প্রবেশ করা পিন কোড রক্ষা করুন.</string>
+    <string name="this_feature_is_currently_unavailable">এই বৈশিষ্ট্য বর্তমানে অনুপলব্ধ</string>
+    <string name="super_speed">(সুপার স্পিড)</string>
+    <string name="good_speed">(ভাল গতি)</string>
+    <string name="norma_speed">(স্বাভাবিক গতি)</string>
+    <string name="poor_speed">(দরিদ্র গতি)</string>
+    <string name="testing_servers">টেস্টিং সার্ভার</string>
+    <string name="speed_test_tip">সার্ভারের সংখ্যার উপর নির্ভর করে, এই পরীক্ষায় কিছু সময় লাগতে পারে, দয়া করে এই পরীক্ষা শেষ না হওয়া পর্যন্ত ধৈর্য ধরুন। পরীক্ষার সময় সার্ভারগুলি সরান বা সরান না, এটি পরীক্ষার প্রক্রিয়ায় ত্রুটি সৃষ্টি করবে।</string>
+    <string name="speed_test_error">গতি পরীক্ষা ত্রুটি, আবার চেষ্টা করুন</string>
+    <string name="speed_test_quick_tip">পরীক্ষার সময় সার্ভার অপসারণ করবেন না</string>
+    <string name="menu_item_import_config_manually_wireguard">ম্যানুয়ালি টাইপ করুন [Wireguard]</string>
+    <string name="menu_item_import_config_manually_hysteria2">Type manually[Hysteria2]</string>
+    <string name="menu_item_import_config_custom">কাস্টম কনফিগারেশন</string>
+    <string name="menu_item_import_config_custom_clipboard">ক্লিপবোর্ড থেকে কাস্টম কনফিগারেশন আমদানি করুন</string>
+    <string name="menu_item_import_config_custom_local">স্থানীয়ভাবে কাস্টম কনফিগারেশন আমদানি করুন</string>
+    <string name="menu_item_import_config_custom_url">URL থেকে কাস্টম কনফিগারেশন আমদানি করুন</string>
+    <string name="menu_item_import_config_custom_url_scan">কাস্টম কনফিগারেশন স্ক্যান URL আমদানি করুন</string>
+    <string name="del_config_comfirm">মুছে ফেলুন নিশ্চিত করুন？</string>
+    <string name="server_lab_remarks">মন্তব্য</string>
+    <string name="server_lab_address">ঠিকানা</string>
+    <string name="server_lab_port">পোর্ট</string>
+    <string name="server_lab_id">আইডি</string>
+    <string name="server_lab_alterid">অলটারআইডি</string>
+    <string name="server_lab_security">নিরাপত্তা</string>
+    <string name="server_lab_network">নেটওয়ার্ক</string>
+    <string name="server_lab_more_function">ট্রান্সপোর্ট</string>
+    <string name="server_lab_head_type">হেড টাইপ</string>
+    <string name="server_lab_mode_type">gRPC মোড</string>
+    <string name="server_lab_request_host">হোস্ট</string>
+    <string name="server_lab_request_host_http">http হোস্ট</string>
+    <string name="server_lab_request_host_ws">ws হোস্ট</string>
+    <string name="server_lab_request_host_httpupgrade">httpupgrade হোস্ট</string>
+    <string name="server_lab_request_host_xhttp">xhttp হোস্ট</string>
+    <string name="server_lab_request_host_h2">h2 হোস্ট</string>
+    <string name="server_lab_request_host_quic">QUIC নিরাপত্তা</string>
+    <string name="server_lab_request_host_grpc">gRPC কর্তৃপক্ষ</string>
+    <string name="server_lab_path">পথ</string>
+    <string name="server_lab_path_ws">ws পথ</string>
+    <string name="server_lab_path_httpupgrade">httpupgrade পথ</string>
+    <string name="server_lab_path_xhttp">xhttp পথ</string>
+    <string name="server_lab_path_h2">h2 পথ</string>
+    <string name="server_lab_path_quic">QUIC কী</string>
+    <string name="server_lab_path_kcp">kcp বীজ</string>
+    <string name="server_lab_path_grpc">gRPC সেবার নাম</string>
+    <string name="server_lab_stream_security">TLS</string>
+    <string name="server_lab_allow_insecure">অনিরাপদ অনুমতি দিন</string>
+    <string name="server_lab_sni">SNI</string>
+    <string name="server_lab_address3">ঠিকানা</string>
+    <string name="server_lab_port3">পোর্ট</string>
+    <string name="server_lab_id3">পাসওয়ার্ড</string>
+    <string name="server_lab_security3">নিরাপত্তা</string>
+    <string name="server_lab_id4">পাসওয়ার্ড (ঐচ্ছিক)</string>
+    <string name="server_lab_security4">ব্যবহারকারী (ঐচ্ছিক)</string>
+    <string name="server_lab_encryption">এনক্রিপশন</string>
+    <string name="server_lab_flow">ফ্লো</string>
+    <string name="server_lab_reserved">সংরক্ষিত (ঐচ্ছিক)</string>
+    <string name="server_lab_local_address">স্থানীয় ঠিকানা (ঐচ্ছিক IPv4/IPv6, কমা দ্বারা পৃথক করা)</string>
+    <string name="server_lab_local_mtu">MTU (ঐচ্ছিক, ডিফল্ট 1420)</string>
+    <string name="toast_success">সফল</string>
+    <string name="toast_failure">ব্যর্থ</string>
+    <string name="toast_none_data">কোনও তথ্য নেই</string>
+    <string name="toast_incorrect_protocol">ভুল প্রোটোকল</string>
+    <string name="toast_decoding_failed">ডিকোডিং ব্যর্থ</string>
+    <string name="title_file_chooser">একটি কনফিগারেশন ফাইল নির্বাচন করুন</string>
+    <string name="toast_require_file_manager">অনুগ্রহ করে একটি ফাইল ম্যানেজার ইনস্টল করুন।</string>
+    <string name="server_customize_config">কাস্টমাইজ কনফিগারেশন</string>
+    <string name="toast_config_file_invalid">অবৈধ কনফিগারেশন</string>
+    <string name="server_lab_content">কনটেন্ট</string>
+    <string name="toast_none_data_clipboard">ক্লিপবোর্ডে কোনও তথ্য নেই</string>
+    <string name="toast_invalid_url">অবৈধ URL</string>
+    <string name="toast_insecure_url_protocol">অনুগ্রহ করে অনিরাপদ HTTP প্রোটোকল সাবস্ক্রিপশন ঠিকানা ব্যবহার করবেন না।</string>
+    <string name="server_lab_need_inbound">ইনবাউন্ড পোর্ট নিশ্চিত করুন সেটিংসের সাথে সামঞ্জস্যপূর্ণ</string>
+    <string name="toast_malformed_josn">কনফিগারেশন বিকৃত</string>
+    <string name="server_lab_request_host6">হোস্ট (SNI) (ঐচ্ছিক)</string>
+    <string name="toast_asset_copy_failed">ফাইল কপি ব্যর্থ, অনুগ্রহ করে ফাইল ম্যানেজার ব্যবহার করুন</string>
+    <string name="menu_item_add_asset">অ্যাসেট যোগ করুন</string>
+    <string name="menu_item_add_file">ফাইল যোগ করুন</string>
+    <string name="menu_item_add_url">URL যোগ করুন</string>
+    <string name="menu_item_scan_qrcode">QR কোড স্ক্যান করুন</string>
+    <string name="menu_item_download_file">ফাইল ডাউনলোড করুন</string>
+    <string name="title_user_asset_add_url">অ্যাসেট URL যোগ করুন</string>
+    <string name="msg_file_not_found">ফাইল খুঁজে পাওয়া যায়নি</string>
+    <string name="msg_remark_is_duplicate">মন্তব্য ইতিমধ্যে বিদ্যমান</string>
+    <string name="toast_action_not_allowed">অ্যাকশন অনুমোদিত নয়</string>
+    <string name="server_obfs_password">Obfs পাসওয়ার্ড</string>
+    <string name="server_lab_port_hop">পোর্ট হপিং</string>
+    <string name="server_lab_port_hop_interval">পোর্ট হপিং ব্যবধান</string>
+    <string name="server_lab_stream_pinsha256">পিন SHA256</string>
+    <string name="server_lab_xhttp_mode">XHTTP মোড</string>
+    <string name="server_lab_xhttp_extra">XHTTP অতিরিক্ত কাঁচা JSON, ফর্ম্যাট: { XHTTPObject }</string>
+    <!-- PerAppProxyActivity -->
+    <string name="msg_dialog_progress">লোড হচ্ছে</string>
+    <string name="menu_item_search">অনুসন্ধান করুন</string>
+    <string name="menu_item_select_all">সবকিছু নির্বাচন করুন</string>
+    <string name="msg_enter_keywords">কীওয়ার্ড লিখুন</string>
+    <string name="switch_bypass_apps_mode">বাইপাস মোড</string>
+    <string name="menu_item_select_proxy_app">অটো সিলেক্ট প্রক্সি অ্যাপ</string>
+    <string name="msg_downloading_content">বিষয়বস্তু ডাউনলোড হচ্ছে</string>
+    <string name="menu_item_export_proxy_app">ক্লিপবোর্ডে রপ্তানি করুন</string>
+    <string name="menu_item_import_proxy_app">ক্লিপবোর্ড থেকে আমদানি করুন</string>
+
+    <!-- Preferences -->
+    <string name="title_settings">সেটিংস</string>
+    <string name="title_advanced">এডভান্সড সেটিংস</string>
+    <string name="title_vpn_settings">VPN সেটিংস</string>
+    <string name="title_pref_per_app_proxy">প্রতি-অ্যাপ প্রক্সি</string>
+    <string name="summary_pref_per_app_proxy">সাধারণ: চেকড অ্যাপ প্রক্সি, আনচেকড সরাসরি সংযোগ; \nবাইপাস মোড: চেকড অ্যাপ সরাসরি সংযুক্ত, আনচেকড প্রক্সি। \nমেনুতে প্রক্সি অ্যাপ্লিকেশন স্বয়ংক্রিয়ভাবে নির্বাচন করার বিকল্প</string>
+    <string name="title_pref_is_booted">স্টার্টআপে স্বয়ংক্রিয় সংযোগ</string>
+    <string name="summary_pref_is_booted">স্টার্টআপে নির্বাচিত সার্ভারের সাথে স্বয়ংক্রিয়ভাবে সংযোগ স্থাপন করে, যা ব্যর্থ হতে পারে</string>
+
+    <string name="title_mux_settings">Mux সেটিংস</string>
+    <string name="summary_title_pref_is_bootedpref_per_app_proxy">সাধারণ: চেক করা অ্যাপটি প্রক্সি, আনচেক করা সরাসরি সংযোগ; বাইপাস মোড: চেক করা অ্যাপটি সরাসরি সংযুক্ত, আনচেক করা প্রক্সি। মেনুতে স্বয়ংক্রিয়ভাবে প্রক্সি অ্যাপ্লিকেশন নির্বাচন করার বিকল্প।</string>
+    <string name="title_pref_mux_enabled">Mux সক্রিয় করুন</string>
+    <string name="summary_pref_mux_enabled">দ্রুত, তবে এটি অস্থিতিশীল সংযোগ সৃষ্টি করতে পারে\nTCP, UDP এবং QUIC পরিচালনা কাস্টমাইজ করুন</string>
+    <string name="title_pref_mux_concurency">TCP সংযোগ (পরিসর -1 থেকে 1024)</string>
+    <string name="title_pref_mux_xudp_concurency">XUDP সংযোগ (পরিসর -1 থেকে 1024)</string>
+    <string name="title_pref_mux_xudp_quic">Mux টানেলে QUIC পরিচালনা</string>
+    <string-array name="mux_xudp_quic_entries">
+        <item>অস্বীকার করুন</item>
+        <item>অনুমতি দিন</item>
+        <item>এড়িয়ে যান</item>
+    </string-array>
+
+    <string name="title_pref_speed_enabled">গতি প্রদর্শন সক্রিয় করুন</string>
+    <string name="summary_pref_speed_enabled">বিজ্ঞপ্তিতে বর্তমান গতি প্রদর্শন করুন।\nব্যবহারের উপর ভিত্তি করে বিজ্ঞপ্তি আইকন পরিবর্তিত হবে।</string>
+
+    <string name="title_pref_sniffing_enabled">স্নিফিং সক্রিয় করুন</string>
+    <string name="summary_pref_sniffing_enabled">প্যাকেট থেকে ডোমেইন স্নিফ করার চেষ্টা করুন (ডিফল্টভাবে চালু)</string>
+
+    <string name="title_pref_route_only_enabled">রুটঅনলি সক্রিয় করুন</string>
+    <string name="summary_pref_route_only_enabled">রুটিংয়ের জন্য শুধুমাত্র স্নিফড ডোমেইন নাম ব্যবহার করুন, এবং লক্ষ্য ঠিকানা হিসেবে আইপি ঠিকানা রাখুন।</string>
+
+    <string name="title_pref_local_dns_enabled">স্থানীয় DNS সক্রিয় করুন</string>
+    <string name="summary_pref_local_dns_enabled">DNS মূল DNS মডিউল দ্বারা প্রক্রিয়া করা হয় (প্রস্তাবিত, যদি LAN এবং মূলভূমি ঠিকানার বাইপাসিং প্রয়োজন হয়)</string>
+
+    <string name="title_pref_fake_dns_enabled">ভুয়া DNS সক্রিয় করুন</string>
+    <string name="summary_pref_fake_dns_enabled">স্থানীয় DNS মিথ্যা আইপি ঠিকানা ফেরত দেয় (দ্রুত, তবে এটি কিছু অ্যাপের জন্য কাজ নাও করতে পারে)</string>
+
+    <string name="title_pref_prefer_ipv6">IPv6 অগ্রাধিকার দিন</string>
+    <string name="summary_pref_prefer_ipv6">IPv6 ঠিকানা এবং রুটকে অগ্রাধিকার দিন</string>
+
+    <string name="title_pref_remote_dns">রিমোট DNS (udp/tcp/https/quic)(ঐচ্ছিক)</string>
+    <string name="summary_pref_remote_dns">DNS</string>
+
+    <string name="title_pref_vpn_dns">VPN DNS (শুধুমাত্র IPv4/v6)</string>
+
+    <string name="title_pref_domestic_dns">ঘরোয়া DNS (ঐচ্ছিক)</string>
+    <string name="summary_pref_domestic_dns">DNS</string>
+
+    <string name="title_pref_dns_hosts">DNS হোস্ট (ফর্ম্যাট: ডোমেইন:ঠিকানা,…)</string>
+    <string name="summary_pref_dns_hosts">ডোমেইন:ঠিকানা,…</string>
+
+    <string name="user_guides">ব্যবহারকারীর নির্দেশিকা</string>
+    <string name="understood">বুঝলাম</string>
+    <string name="active">সক্রিয়</string>
+    <string name="test_result">পরীক্ষার ফলাফল</string>
+    <string name="test_result_tip">সব সার্ভারের পরীক্ষা সফলভাবে সম্পন্ন হয়েছে</string>
+
+    <string name="title_pref_proxy_sharing_enabled">LAN থেকে সংযোগ অনুমোদন করুন</string>
+    <string name="summary_pref_proxy_sharing_enabled">অন্যান্য ডিভাইসগুলি আপনার আইপি ঠিকানা ব্যবহার করে প্রক্সিতে সংযুক্ত হতে পারে, শুধুমাত্র বিশ্বস্ত নেটওয়ার্কে সক্রিয় করুন যাতে অনুমোদিত সংযোগ এড়ানো যায়</string>
+    <string name="toast_warning_pref_proxysharing_short">LAN থেকে সংযোগ অনুমোদন করুন, নিশ্চিত করুন যে আপনি একটি বিশ্বস্ত নেটওয়ার্কে আছেন</string>
+
+    <string name="title_pref_allow_insecure">অনিরাপদ অনুমতি দিন</string>
+    <string name="summary_pref_allow_insecure">যখন TLS, ডিফল্টভাবে allowInsecure</string>
+
+    <string name="title_pref_socks_port">Local প্রক্সি পোর্ট</string>
+    <string name="summary_pref_socks_port">Local প্রক্সি পোর্ট</string>
+
+    <string name="title_pref_local_dns_port">স্থানীয় DNS পোর্ট</string>
+    <string name="summary_pref_local_dns_port">স্থানীয় DNS পোর্ট</string>
+
+    <string name="title_pref_confirm_remove">কনফিগারেশন ফাইল মুছে ফেলার নিশ্চিতকরণ</string>
+    <string name="summary_pref_confirm_remove">কনফিগারেশন ফাইল মুছে ফেলার জন্য ব্যবহারকারীর দ্বিতীয় নিশ্চিতকরণের প্রয়োজন</string>
+
+    <string name="title_pref_start_scan_immediate">তাত্ক্ষণিক স্ক্যান শুরু করুন</string>
+    <string name="summary_pref_start_scan_immediate">শুরুতে তাত্ক্ষণিকভাবে স্ক্যান করতে ক্যামেরা খুলুন, অন্যথায় আপনি কোড স্ক্যান বা টুলবারে একটি ছবি নির্বাচন করতে পারেন</string>
+    <string name="title_pref_append_http_proxy">VPN-তে HTTP প্রক্সি যোগ করুন</string>
+    <string name="summary_pref_append_http_proxy">HTTP প্রক্সি সরাসরি (ব্রাউজার/ কিছু সমর্থিত অ্যাপ) থেকে ব্যবহার করা হবে, ভার্চুয়াল NIC ডিভাইস (Android 10+) ব্যবহার না করেই।</string>
+    <string name="title_pref_feedback">মতামত</string>
+    <string name="summary_pref_feedback">মতামত উন্নয়ন বা বাগগুলি GitHub-এ পাঠান</string>
+    <string name="summary_pref_tg_group">টেলিগ্রাম গ্রুপে যোগদান করুন</string>
+    <string name="toast_tg_app_not_found">টেলিগ্রাম অ্যাপ পাওয়া যায়নি</string>
+    <string name="title_privacy_policy">গোপনীয়তা নীতি</string>
+
+    <string name="title_pref_promotion">প্রচার</string>
+    <string name="summary_pref_promotion">প্রচার, বিস্তারিত জানার জন্য ক্লিক করুন (ডোনেশন মুছে ফেলা যেতে পারে)</string>
+
+    <string name="title_pref_auto_update_subscription">স্বয়ংক্রিয় আপডেট সাবস্ক্রিপশন</string>
+    <string name="summary_pref_auto_update_subscription">পটভূমিতে একটি নির্দিষ্ট সময় পর পর আপনার সাবস্ক্রিপশন স্বয়ংক্রিয়ভাবে আপডেট করুন। ডিভাইসের উপর নির্ভর করে, এই বৈশিষ্ট্যটি সবসময় কাজ নাও করতে পারে</string>
+    <string name="title_pref_auto_update_interval">অটো আপডেট ইন্টারভ্যাল (মিনিট, সর্বনিম্ন মান ১৫)</string>
+
+    <string name="title_core_loglevel">লগ স্তর</string>
+    <string name="title_mode">মোড</string>
+    <string name="title_mode_help">আরো সাহায্যের জন্য ক্লিক করুন</string>
+    <string name="title_language">ভাষা</string>
+    <string name="title_ui_settings">ইউআই সেটিংস</string>
+    <string name="title_logcat">লগক্যাট</string>
+    <string name="logcat_copy">কপি করুন</string>
+    <string name="logcat_clear">স্পষ্ট করুন</string>
+    <string name="title_service_restart">সার্ভিস পুনরায় চালু করুন</string>
+    <string name="title_del_all_config">সব কনফিগারেশন মুছে ফেলুন</string>
+    <string name="title_del_duplicate_config">ডুপ্লিকেট কনফিগারেশন মুছে ফেলুন</string>
+    <string name="title_del_invalid_config">অবৈধ কনফিগারেশন মুছে ফেলুন (প্রথমে পরীক্ষা করুন)</string>
+    <string name="title_export_all">কাস্টম না করা কনফিগারেশনগুলি ক্লিপবোর্ডে রপ্তানি করুন</string>
+    <string name="title_sub_setting">সাবস্ক্রিপশন গ্রুপ সেটিং</string>
+    <string name="sub_setting_remarks">মন্তব্য</string>
+    <string name="sub_setting_url">ঐচ্ছিক URL</string>
+    <string name="sub_setting_filter">Remarks regular filter</string>
+    <string name="sub_setting_enable">আপডেট সক্রিয় করুন</string>
+    <string name="sub_auto_update">স্বয়ংক্রিয় আপডেট সক্রিয় করুন</string>
+    <string name="sub_setting_pre_profile">পূর্ববর্তী প্রক্সি কনফিগারেশন মন্তব্য</string>
+    <string name="sub_setting_next_profile">পরবর্তী প্রক্সি কনফিগারেশন মন্তব্য</string>
+    <string name="sub_setting_pre_profile_tip">কনফিগারেশন মন্তব্য বিদ্যমান এবং অনন্য</string>
+    <string name="title_sub_update">সাবস্ক্রিপশন আপডেট</string>
+    <string name="title_ping_all_server">সব কনফিগারেশন TCPing</string>
+    <string name="title_real_ping_all_server">সব কনফিগারেশন প্রকৃত বিলম্ব</string>
+    <string name="title_user_asset_setting">জিও অ্যাসেট ফাইলগুলি</string>
+    <string name="title_sort_by_test_results">টেস্ট ফলাফল দ্বারা সাজানো</string>
+    <string name="title_filter_config">কনফিগারেশন ফাইল ফিল্টার করুন</string>
+    <string name="filter_config_all">সব সাবস্ক্রিপশন গ্রুপ</string>
+    <string name="title_del_config_count">%dটি কনফিগারেশন মুছুন</string>
+    <string name="title_import_config_count">%dটি কনফিগারেশন আমদানি করুন</string>
+    <string name="title_export_config_count">%dটি কনফিগারেশন রপ্তানি করুন</string>
+    <string name="title_update_config_count">%dটি কনফিগারেশন আপডেট করুন</string>
+    <string name="title_del_duplicate_config_count">%d ডুপ্লিকেট কনফিগারেশন মুছে ফেলুন</string>
+    <string name="tasker_start_service">সার্ভিস শুরু করুন</string>
+    <string name="tasker_setting_confirm">নিশ্চিত করুন</string>
+
+    <string name="routing_settings_title">রাউটিং সেটিংস</string>
+    <string name="routing_settings_tips">কমা (,) দ্বারা আলাদা করুন, মনে রাখবেন সেভ করতে</string>
+    <string name="routing_settings_save">সেভ করুন</string>
+    <string name="routing_settings_delete">মুছে ফেলুন</string>
+    <string name="routing_settings_domain_strategy">ডোমেইন কৌশল</string>
+    <string name="routing_settings_rule_title">রাউটিং নিয়ম সেটিংস</string>
+    <string name="routing_settings_add_rule">নিয়ম যোগ করুন</string>
+    <string name="routing_settings_import_rulesets_from_qrcode">QRcode থেকে রুলসেট আমদানি করুন</string>
+    <string name="routing_settings_import_predefined_rulesets">পূর্বনির্ধারিত নিয়মাবলী আমদানি করুন</string>
+    <string name="routing_settings_import_rulesets_tip">Existing rulesets will be deleted, are you sure to continue?</string>
+    <string name="routing_settings_import_rulesets_from_clipboard">Import ruleset from clipboard</string>
+    <string name="routing_settings_export_rulesets_to_clipboard">Export ruleset to clipboard</string>
+    <string name="routing_settings_locked">Locked, keep this rule when import presets</string>
+
+    <string name="connection_test_pending">সংযোগ পরীক্ষা করুন</string>
+    <string name="connection_test_testing">পরীক্ষা চলছে…</string>
+    <string name="connection_test_available">সফল: HTTP সংযোগ নিয়েছে %dms</string>
+    <string name="connection_test_error">ইন্টারনেট সংযোগ সনাক্ত করতে ব্যর্থ: %s</string>
+    <string name="connection_test_fail">ইন্টারনেট উপলব্ধ নয়</string>
+    <string name="connection_test_error_status_code">ত্রুটি কোড: #%d</string>
+    <string name="connection_connected">সংযুক্ত, সংযোগ পরীক্ষা করতে ট্যাপ করুন</string>
+    <string name="connection_not_connected">সংযুক্ত নয়</string>
+
+    <string name="import_subscription_success">সাবস্ক্রিপশন সফলভাবে আমদানি করা হয়েছে</string>
+    <string name="import_subscription_failure">সাবস্ক্রিপশন আমদানি ব্যর্থ</string>
+    <string name="title_fragment_settings">ফ্র্যাগমেন্ট সেটিংস</string>
+    <string name="title_pref_fragment_packets">ফ্র্যাগমেন্ট প্যাকেটস</string>
+    <string name="title_pref_fragment_length">ফ্র্যাগমেন্ট দৈর্ঘ্য (ন্যূনতম-সর্বাধিক)</string>
+    <string name="title_pref_fragment_interval">ফ্র্যাগমেন্ট ইন্টারভ্যাল (ন্যূনতম-সর্বাধিক)</string>
+    <string name="title_pref_fragment_enabled">ফ্র্যাগমেন্ট সক্রিয় করুন</string>
+    <string-array name="share_method">
+        <item>QR কোড</item>
+        <item>ক্লিপবোর্ডে রপ্তানি করুন</item>
+        <item>পূর্ণ কনফিগারেশন ক্লিপবোর্ডে রপ্তানি করুন</item>
+    </string-array>
+
+    <string-array name="share_sub_method">
+        <item>QR কোড</item>
+        <item>ক্লিপবোর্ডে রপ্তানি করুন</item>
+    </string-array>
+
+    <string-array name="mode_entries">
+        <item>VPN</item>
+        <item>শুধুমাত্র প্রোক্সি</item>
+    </string-array>
+
+    <string-array name="preset_rulesets">
+        <item>চায়না হোয়াইটলিস্ট</item>
+        <item>চায়না ব্ল্যাকলিস্ট</item>
+        <item>গ্লোবাল</item>
+        <item>ইরান হোয়াইটলিস্ট</item>
+    </string-array>
+
+<string name="user_guides_tip">
+● বিনামূল্যে সার্ভার: \n \n
+বিনামূল্যে সার্ভার ব্যবহার করতে, তিন-বিন্দু মেনুতে প্রথম বিকল্পটি আলতো চাপুন। \n \n
+বিভিন্ন নেটওয়ার্ক এবং ইন্টারনেট অপারেটরের জন্য প্রচুর সংখ্যক সার্ভার উপলব্ধ থাকবে এবং আপনার নেটওয়ার্ক এবং ইন্টারনেট অপারেটরের উপর নির্ভর করে, তাদের একটি শতাংশ আপনার জন্য সক্রিয় থাকবে। \n \n
+তারপর চেক শুরু করতে তিন-বিন্দু মেনুতে দ্বিতীয় বিকল্পটি আলতো চাপুন। এই পরীক্ষায় সময় লাগবে (কয়েক মিনিট), তাই শেষ সার্ভারটি পরীক্ষা না হওয়া পর্যন্ত ধৈর্য ধরুন। \n \n
+পরীক্ষা সম্পন্ন হলে, সক্রিয় সার্ভারগুলি সবুজ এবং নিষ্ক্রিয় সার্ভারগুলি লাল রঙে চিহ্নিত করা হবে। \n \n
+\n \n
+● ব্যক্তিগত সার্ভার: \n \n
+আপনি সহজেই অ্যাপটিতে আপনার ব্যক্তিগত বা কেনা সার্ভারগুলি ব্যবহার করতে পারেন। এটি করার জন্য, স্ক্রিনের উপরের + বোতামের মাধ্যমে সার্ভার তালিকায় আপনার ব্যক্তিগত বা কেনা কনফিগারেশন যুক্ত করুন। \n \n
+\n \n
+● সার্ভার লক: \n \n
+এই অ্যাপটিতে সার্ভার তালিকা লক করার ক্ষমতা রয়েছে, যা তালিকার সার্ভারগুলি অনুলিপি, ভাগ বা মুছে ফেলার ক্ষমতা অক্ষম করে। \n \n
+এই বৈশিষ্ট্যটি সক্ষম করতে, তিন-লাইন মেনুতে লক সার্ভার বিকল্পটি টিপুন, খোলা স্ক্রিনে পছন্দসই পাসওয়ার্ডটি প্রবেশ করান এবং লক বোতামটি টিপুন। \n \n
+তিন-লাইন মেনুতে আবার লকটি আনলক করতে, এবার আনলক বিকল্পটি টিপুন এবং পাসওয়ার্ডটি প্রবেশ করান এবং আনলক বোতাম টিপে এটি নিশ্চিত করুন। \n \n
+আপনি যদি সার্ভারগুলি লক করার পাশাপাশি ফ্রি সার্ভার আপডেট বৈশিষ্ট্যটি অক্ষম করতে চান, তবে সার্ভারগুলি লক করার জন্য পাসওয়ার্ড প্রবেশ না করা পর্যন্ত স্ক্রিনে সার্ভার লক বোতামটি ধরে রাখুন। এর পরে, স্টোর মোড সক্রিয় হবে এবং সার্ভার তালিকা লক করার পাশাপাশি, ফ্রি সার্ভার আপডেট বৈশিষ্ট্যটিও অক্ষম হয়ে যাবে। \n \n
+\n \n
+● স্মার্ট সংযোগ:\n \n
+প্রতিটি গ্রুপের তিন-ডট মেনুতে স্মার্ট সংযোগ বিকল্পটি সক্ষম করে, আপনি স্বয়ংক্রিয়ভাবে সেই গ্রুপের জন্য সবচেয়ে দ্রুত বা সবচেয়ে কম ট্রাফিকযুক্ত সার্ভার সক্রিয় করতে পারেন, এবং অ্যাপ সেটিংস পৃষ্ঠায় এর সংযোগ সেটিংসও পরিচালনা করতে পারেন。\n \n \n \n
+● স্মার্ট টেস্ট: \n \n
+এই মোডে, সক্রিয় গ্রুপের সমস্ত সার্ভার পরীক্ষা করার পর, নতুন পরীক্ষার ফলাফলের উপর ভিত্তি করে একটি স্মার্ট সংযোগ তৈরি এবং সক্রিয় করা হয়। সার্ভারের অবস্থা আপডেট করতে এবং সেরা সংযোগ পেতে আপনি সময়ে সময়ে এই বিকল্পটি চালাতে পারেন। \n \n \n \n
+● সার্ভার গ্রুপ: \n \n
+আপনি প্রতিটি নেটওয়ার্কে সক্রিয় সার্ভারগুলি আলাদা করতে পারেন যাতে ইন্টারনেট নেটওয়ার্ক পরিবর্তন হলে আপনাকে পুনরায় চেষ্টা করতে না হয়। সার্ভারগুলিকে WiFi, SIM 1 এবং SIM 2 গ্রুপে স্থানান্তর করতে, কিছুক্ষণের জন্য পছন্দসই সার্ভারটি স্পর্শ করুন এবং ধরে রাখুন। \n \n \n \n
+● ভাষা পরিবর্তন: \n \n
+
+এই অ্যাপ্লিকেশনটি একাধিক ভাষা সমর্থন করে, অ্যাপ্লিকেশনটির ভাষা পরিবর্তন করতে, সেটিংস পৃষ্ঠার শেষ বিকল্পটি (অ্যাপ্লিকেশন ভাষা) পরিবর্তন করুন। \n \n \n \n
+
+Gold V2ray একটি বিনামূল্যের ক্লায়েন্ট অ্যাপ্লিকেশন যা ব্যবহারকারীদের বিশেষ পরিষেবা প্রদান করে। \n \n
+
+মনে রাখবেন যে ব্যবহারকারীদের বিনামূল্যে প্রদান করা সার্ভারগুলি উচ্চ মূল্যে সরবরাহ করা হয় এবং ক্রমাগত আপডেট করা হয়। আপনি যদি Google Play-তে ইতিবাচক রেটিং এবং মন্তব্য দিয়ে আমাদের সমর্থন করেন তবে আমরা খুশি হব, এবং যদি আপনার অ্যাপটি ব্যবহার করতে কোনও সমস্যা হয়, তাহলে অনুগ্রহ করে প্রতিক্রিয়া বিভাগের মাধ্যমে আমাদের কাছে পাঠান যাতে আমরা এটি সমাধান করতে পারি।
+</string>
+    <string name="importing">আমদানি করা হচ্ছে...</string>
+    <string name="sub_update_error">আপডেটটি ব্যর্থ হয়েছে, অনুগ্রহ করে কয়েক মিনিটের মধ্যে আবার চেষ্টা করুন৷ ত্রুটি অব্যাহত থাকলে, অ্যাপের পরবর্তী সংস্করণে সমস্যাটি ঠিক হওয়ার জন্য অপেক্ষা করুন।</string>
+
+    <string name="title_pref_vpn_bypass_lan">ভিপিএন কি ল্যানকে বাইপাস করে?</string>
+    <string-array name="vpn_bypass_lan">
+        <item>Follow config</item>
+        <item>Bypass</item>
+        <item>Not Bypass</item>
+    </string-array>
+
+    <string name="pull_down_to_refresh">রিফ্রেশ করতে নিচে টানুন!</string>
+    <string name="server_lab_bandwidth_down">ব্যান্ডউইথ কম (ইউনিট)</string>
+    <string name="server_lab_bandwidth_up">ব্যান্ডউইথ বৃদ্ধি (ইউনিট)</string>
+    <string name="menu_item_import_config_local">স্থানীয়ভাবে কনফিগারেশন আমদানি করুন</string>
+    <string name="per_app_proxy_settings">প্রতি-অ্যাপ সেটিংস</string>
+    <string name="per_app_proxy_settings_enable">প্রতি-অ্যাপ সক্ষম করুন</string>
+    <string name="asset_geo_files_sources">জিও ফাইলের উৎস (ঐচ্ছিক)</string>
+    <string name="sub_allow_insecure_url">অনিরাপদ HTTP ঠিকানার অনুমতি দিন</string>
+    <string name="server_lab_preshared_key">প্রি-শেয়ার্ড কী (ঐচ্ছিক)</string>
+    <string name="all">সব</string>
+    <string name="free">বিনামূল্যে</string>
+    <string name="user">ব্যবহারকারী</string>
+
+    <string name="select_target_group">সার্ভারকে বিভাগে সরান</string>
+    <string name="copy_to_wifi">ওয়াই ফাই</string>
+    <string name="copy_to_sim1">SIM</string>
+    <string name="copy_to_sim2">SIM 2</string>
+    <string name="copied">কপি করা হয়েছে</string>
+    <string name="server_copied">সার্ভার সফলভাবে কপি হয়েছে</string>
+    <string name="wifi_tab">ওয়াই ফাই</string>
+    <string name="sim1_tab">SIM</string>
+    <string name="sim2_tab">SIM2</string>
+    <string name="server_already_in_this_group">এই সার্ভারটি ইতিমধ্যেই এই বিভাগে আছে</string>
+    <string name="server_separate_tip">সার্ভারগুলিকে আলাদা করতে স্পর্শ করে ধরে রাখুন</string>
+
+    <string name="title_pref_ui_mode_night">ইউআই মোড সেটিংস</string>
+    <string-array name="ui_mode_night">
+        <item>সিস্টেম অনুসরণ করুন</item>
+        <item>লাইট</item>
+        <item>ডার্ক</item>
+    </string-array>
+
+    <string name="perapp_dialog_title">অনুমতি প্রয়োজন</string>
+    <string name="perapp_dialog_message">এই অ্যাপটি আপনার ডিভাইসে ইনস্টল করা অ্যাপগুলির তালিকা সংগ্রহ করে যাতে আপনি নির্বাচন করতে পারেন কোন অ্যাপগুলি প্রক্সি বৈশিষ্ট্য ব্যবহার করবে। এই তথ্য তৃতীয় পক্ষের সাথে ভাগ করা হয় না।</string>
+    <string name="perapp_dialog_accept">গৃহীত</string>
+    <string name="perapp_dialog_denied">অনুমোদন নেই</string>
+    <string name="title_pref_vpn_interface_address">VPN Interface Address</string>
+    <string name="title_core_settings">কোর সেটিংস</string>
+    <string name="title_outbound_domain_resolve_method">Outbound domain pre-resolve method</string>
+    <string-array name="outbound_domain_resolve_method">
+        <item>Do not resolve</item>
+        <item>Resolve and add to DNS Hosts</item>
+        <item>Resolve and replace domain</item>
+    </string-array>
+
+    <string name="title_create_intelligent_selection_all_server">স্মার্ট সংযোগ</string>
+    <string name="intelligent_selection">স্মার্ট সংযোগ</string>
+    <string name="sub_setting_intelligent_selection_filter">মন্তব্যের স্মার্ট সংযোগ ফিল্টার</string>
+    <string name="title_intelligent_selection_method">স্মার্ট সংযোগ পদ্ধতি</string>
+    <string-array name="intelligent_selection_method">
+        <item>সবচেয়ে দ্রুত পিং</item>
+        <item>সবচেয়ে কম ট্রাফিক</item>
+    </string-array>
+
+    <string name="server_lab_mldsa65_verify">Mldsa65 যাচাই</string>
+    <string name="title_pref_use_hev_tunnel">নতুন TUN ফিচার সক্রিয় করুন</string>
+    <string name="summary_pref_use_hev_tunnel">সক্রিয় থাকলে, TUN hev-socks5-tunnel ব্যবহার করবে; অন্যথায় এটি badvpn-tun2socks ব্যবহার করবে</string>
+    <string name="title_pref_hev_tunnel_loglevel">Hev Tun লগ স্তর</string>
+    <string name="title_pref_hev_tunnel_rw_timeout">Hev Tun পড়া/লেখা টাইমআউট (মিলিসেকেন্ড, ডিফল্ট 300000)</string>
+    <string name="title_pref_vpn_mtu">VPN MTU (ডিফল্ট 1500)</string>
+    <string name="pre_resolving_domain">ডোমেইন প্রি-রিসলভ করা হচ্ছে…</string>
+    <string name="about_description_mod_version">মোড সংস্করণ</string>
+    <string name="smart_test">স্মার্ট টেস্ট</string>
+    <string name="smart_test_tip">পরীক্ষা সম্পন্ন হওয়ার পর, একটি স্মার্ট সংযোগ স্বয়ংক্রিয়ভাবে তৈরি হয়।</string>
+    <string name="smart_connection_updated">স্মার্ট সংযোগ আপডেট করা হয়েছে</string>
+    <string name="pause">বিরতি</string>
+    <string name="resume">পুনরায় শুরু করুন</string>
+
+</resources>

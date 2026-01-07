@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ServerActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.SubEditActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,8 +26,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorText"
-                    android:text="@string/title_server"
+                    android:text="@string/title_sub_setting"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -43,7 +45,7 @@
 
                 <EditText
                     android:id="@+id/et_remarks"
-                    android:textColor="@color/customColorInputs"
+                    android:textColor="@color/colorText"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/edit_height"
                     android:inputType="text" />
@@ -54,20 +56,106 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/layout_margin_top_height"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorText"
+                    android:text="@string/sub_setting_url" />
+
+                <EditText
+                    android:id="@+id/et_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="top"
+                    android:textColor="@color/colorText"
+                    android:inputType="textMultiLine"
+                    android:maxLines="10"
+                    android:minLines="5"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="@string/sub_allow_insecure_url" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/allow_insecure_url"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top_height"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_setting_pre_profile" />
+
+                <EditText
+                    android:id="@+id/et_pre_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_height"
+                    android:inputType="text"
+                    android:hint="@string/sub_setting_pre_profile_tip" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top_height"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_setting_next_profile" />
+
+                <EditText
+                    android:id="@+id/et_next_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_height"
+                    android:inputType="text"
+                    android:hint="@string/sub_setting_pre_profile_tip" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorText"
                     android:layout_weight="1.0"
                     android:text="@string/sub_setting_enable" />
 
-
                 <androidx.appcompat.widget.AppCompatCheckBox
                     android:id="@+id/chk_enable"
                     android:layout_width="wrap_content"
-                    android:textColor="@color/customColorInputs"
+                    android:textColor="@color/colorText"
                     android:layout_height="wrap_content"
                     android:paddingStart="2dp"
                     android:paddingEnd="6dp" />
@@ -87,12 +175,11 @@
                     android:layout_weight="1.0"
                     android:text="@string/sub_auto_update" />
 
-
                 <androidx.appcompat.widget.AppCompatCheckBox
                     android:id="@+id/auto_update_check"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/customColorInputs"
+                    android:textColor="@color/colorText"
                     android:paddingStart="2dp"
                     android:paddingEnd="6dp" />
 
@@ -105,26 +192,36 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorText"
-                    android:text="@string/sub_setting_url" />
-
+                    android:text="@string/sub_setting_filter" />
 
                 <EditText
-                    android:id="@+id/et_url"
+                    android:id="@+id/et_filter"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="top"
-                    android:textColor="@color/customColorInputs"
-                    android:inputType="textMultiLine"
-                    android:maxLines="10"
-                    android:minLines="5"
-                    android:scrollbars="vertical" />
+                    android:layout_height="@dimen/edit_height"
+                    android:inputType="text" />
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_setting_intelligent_selection_filter" />
+
+                <EditText
+                    android:id="@+id/et_intelligent_selection_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -137,4 +234,5 @@
             android:orientation="vertical" />
 
     </LinearLayout>
+
 </ScrollView>

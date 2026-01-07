@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Gold v2ray</string>
+    <string name="app_name" translatable="false">Gold V2ray</string>
     <string name="app_widget_name">Switch</string>
     <string name="app_tile_name">Switch</string>
     <string name="app_tile_first_use">First use of this feature, please use the app to add server</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
     <string name="migration_success">Data migration success!</string>
     <string name="migration_fail">Data migration failed!</string>
 
     <!-- Notifications -->
     <string name="notification_action_stop_v2ray">Stop</string>
     <string name="toast_permission_denied">Unable to obtain the permission</string>
-    <string name="notification_action_more">click for more</string>
+    <string name="toast_permission_denied_notification">Unable to obtain the notification permission</string>
+    <string name="notification_action_more">Click for more</string>
     <string name="toast_services_start">Start Services</string>
     <string name="toast_services_stop">Stop Services</string>
     <string name="toast_services_success">Start Services Success</string>
@@ -25,43 +26,59 @@
     <string name="menu_item_del_config">Delete config</string>
     <string name="menu_item_import_config_qrcode">Import config from QRcode</string>
     <string name="menu_item_import_config_clipboard">Import config from Clipboard</string>
-    <string name="menu_item_import_config_manually_vmess">Type manually[Vmess]</string>
+    <string name="menu_item_import_config_manually_vmess">Type manually[VMess]</string>
     <string name="menu_item_import_config_manually_vless">Type manually[VLESS]</string>
     <string name="menu_item_import_config_manually_ss">Type manually[Shadowsocks]</string>
-    <string name="menu_item_import_config_manually_socks">Type manually[Socks]</string>
+    <string name="menu_item_import_config_manually_socks">Type manually[SOCKS]</string>
+    <string name="menu_item_import_config_manually_http">Type manually[HTTP]</string>
     <string name="menu_item_import_config_manually_trojan">Type manually[Trojan]</string>
     <string name="menu_item_import_config_custom">Custom config</string>
     <string name="menu_item_import_config_custom_clipboard">Import custom config from Clipboard</string>
-    <string name="menu_item_import_config_custom_local">Import custom config from locally</string>
+    <string name="menu_item_import_config_custom_local">Import custom config from Locally</string>
     <string name="menu_item_import_config_custom_url">Import custom config from URL</string>
     <string name="menu_item_import_config_custom_url_scan">Import custom config scan URL</string>
     <string name="del_config_comfirm">Confirm delete？</string>
-    <string name="server_lab_remarks">remarks</string>
-    <string name="server_lab_address">address</string>
-    <string name="server_lab_port">port</string>
-    <string name="server_lab_id">id</string>
-    <string name="server_lab_alterid">alterId</string>
-    <string name="server_lab_security">security</string>
+    <string name="server_lab_remarks">Remarks</string>
+    <string name="server_lab_address">Address</string>
+    <string name="server_lab_port">Port</string>
+    <string name="server_lab_id">Id</string>
+    <string name="server_lab_alterid">Alter Id</string>
+    <string name="server_lab_security">Security</string>
     <string name="server_lab_network">Network</string>
     <string name="server_lab_more_function">Transport</string>
-    <string name="server_lab_head_type">head type</string>
-    <string name="server_lab_mode_type">gRPC mode</string>
-    <string name="server_lab_request_host">request host(host/ws host/h2 host)/QUIC security</string>
-    <string name="server_lab_path">path(ws path/h2 path)/QUIC key/kcp seed/gRPC serviceName</string>
+    <string name="server_lab_head_type">Head Type</string>
+    <string name="server_lab_mode_type">GRPC mode</string>
+    <string name="server_lab_request_host">Host</string>
+    <string name="server_lab_request_host_http">HTTP host</string>
+    <string name="server_lab_request_host_ws">WS host</string>
+    <string name="server_lab_request_host_httpupgrade">HTTP upgrade host</string>
+    <string name="server_lab_request_host_xhttp">XHTTP host</string>
+    <string name="server_lab_request_host_h2">H2 host</string>
+    <string name="server_lab_request_host_quic">QUIC security</string>
+    <string name="server_lab_request_host_grpc">GRPC Authority</string>
+    <string name="server_lab_path">Path</string>
+    <string name="server_lab_path_ws">WS path</string>
+    <string name="server_lab_path_httpupgrade">HTTP upgrade path</string>
+    <string name="server_lab_path_xhttp">"XHTTP path "</string>
+    <string name="server_lab_path_h2">H2 path</string>
+    <string name="server_lab_path_quic">QUIC key</string>
+    <string name="server_lab_path_kcp">KCP seed</string>
+    <string name="server_lab_path_grpc">GRPC serviceName</string>
     <string name="server_lab_stream_security">TLS</string>
     <string name="server_lab_stream_fingerprint" translatable="false">Fingerprint</string>
     <string name="server_lab_stream_alpn" translatable="false">Alpn</string>
-    <string name="server_lab_allow_insecure">allowInsecure</string>
+    <string name="server_lab_allow_insecure">Allow Insecure</string>
     <string name="server_lab_sni">SNI</string>
-    <string name="server_lab_address3">address</string>
-    <string name="server_lab_port3">port</string>
-    <string name="server_lab_id3">password</string>
-    <string name="server_lab_security3">security</string>
+    <string name="server_lab_address3">Address</string>
+    <string name="server_lab_port3">Port</string>
+    <string name="server_lab_id3">Password</string>
+    <string name="server_lab_security3">Security</string>
     <string name="server_lab_id4">Password(Optional)</string>
     <string name="server_lab_security4">User(Optional)</string>
-    <string name="server_lab_encryption">encryption</string>
-    <string name="server_lab_flow">flow</string>
+    <string name="server_lab_encryption">Encryption</string>
+    <string name="server_lab_flow">Flow</string>
     <string name="server_lab_public_key" translatable="false">PublicKey</string>
+    <string name="server_lab_preshared_key">PreSharedKey(optional)</string>
     <string name="server_lab_short_id" translatable="false">ShortId</string>
     <string name="server_lab_spider_x" translatable="false">SpiderX</string>
     <string name="toast_success">Success</string>
@@ -76,6 +93,7 @@
     <string name="server_lab_content">Content</string>
     <string name="toast_none_data_clipboard">There is no data in the clipboard</string>
     <string name="toast_invalid_url">Invalid URL</string>
+    <string name="toast_insecure_url_protocol">Please do not use the insecure HTTP protocol subscription address</string>
     <string name="server_lab_need_inbound">Ensure inbounds port is consistent with the settings</string>
     <string name="toast_malformed_josn">Config malformed</string>
     <string name="server_lab_request_host6">Host(SNI)(Optional)</string>
@@ -100,10 +118,14 @@
     <string name="title_advanced">Advanced Settings</string>
     <string name="title_vpn_settings">VPN Settings</string>
     <string name="title_pref_per_app_proxy">Per-app proxy</string>
-    <string name="summary_pref_per_app_proxy">General: Checked App is proxy, unchecked direct connection; \nbypass mode: checked app directly connected, unchecked proxy. \nThe option to automatically select the proxy application in the menu</string>
+    <string name="summary_pref_per_app_proxy">General: Checked apps use proxy, unchecked apps connect directly; \nBypass mode: checked apps connect directly, unchecked apps use proxy. \nThe option to automatically select proxy applications is in the menu</string>
+    <string name="title_pref_is_booted">Auto connect at startup</string>
+    <string name="summary_pref_is_booted">Automatically connects to the selected server at startup, which may be unsuccessful</string>
+    <string name="summary_title_pref_is_bootedpref_per_app_proxy">General: Checked App is proxy, unchecked direct connection; \nbypass mode: checked app directly connected, unchecked proxy. \nThe option to automatically select the proxy application in the menu</string>
 
     <string name="title_pref_mux_enabled">Enable Mux</string>
-    <string name="summary_pref_mux_enabled">Faster, but it may cause unstable connectivity\nTCP traffic mux with default 8 connections，customize how to handle UDP and QUIC below</string>
+    <string name="summary_pref_mux_enabled">Faster, but it may cause unstable connectivity\nCustomize how to handle TCP, UDP and QUIC below</string>
+    <string name="title_pref_mux_concurency">TCP connections（range -1 to 1024）</string>
     <string name="title_pref_mux_xudp_concurency">XUDP connections（range -1 to 1024）</string>
     <string name="title_pref_mux_xudp_quic">Handling of QUIC in mux tunnel</string>
     <string-array name="mux_xudp_quic_entries">
@@ -118,23 +140,19 @@
 
     <string name="title_pref_sniffing_enabled">Enable Sniffing</string>
     <string name="summary_pref_sniffing_enabled">Try sniff domain from the packet (default on)</string>
+    <string name="title_pref_route_only_enabled">Enable routeOnly</string>
+    <string name="summary_pref_route_only_enabled">Use the sniffed domain name for routing only, and keep the target address as the IP address.</string>
 
     <string name="title_pref_local_dns_enabled">Enable local DNS</string>
-    <string name="summary_pref_local_dns_enabled">DNS processed by core‘s DNS module (Recommended, if need routing Bypassing LAN and
-        mainland address)</string>
+    <string name="summary_pref_local_dns_enabled">DNS processed by core‘s DNS module (Recommended if you need routing bypassing LAN and mainland addresses)</string>
 
     <string name="title_pref_fake_dns_enabled">Enable fake DNS</string>
-    <string name="summary_pref_fake_dns_enabled">local DNS returns fake IP address (faster, but it may not work for some apps)</string>
+    <string name="summary_pref_fake_dns_enabled">Local DNS returns fake IP addresses (faster, but it may not work for some apps)</string>
 
     <string name="title_pref_prefer_ipv6">Prefer IPv6</string>
-    <string name="summary_pref_prefer_ipv6">Prefer IPv6 address and routes</string>
+    <string name="summary_pref_prefer_ipv6">Enable IPv6 routes and Prefer IPv6 addresses</string>
 
-    <string name="title_pref_routing">Routing</string>
-    <string name="title_pref_routing_domain_strategy">Domain strategy</string>
-    <string name="title_pref_routing_mode">Predefined rules</string>
-    <string name="title_pref_routing_custom">Custom rules</string>
-
-    <string name="title_pref_remote_dns">Remote DNS (Optional)</string>
+    <string name="title_pref_remote_dns">Remote DNS (udp/tcp/https/quic)(Optional)</string>
     <string name="summary_pref_remote_dns">DNS</string>
 
     <string name="title_pref_vpn_dns">VPN DNS (only IPv4/v6)</string>
@@ -142,18 +160,16 @@
     <string name="title_pref_domestic_dns">Domestic DNS (Optional)</string>
     <string name="summary_pref_domestic_dns">DNS</string>
 
+    <string name="title_pref_dns_hosts">DNS hosts (Format: domain:address,…)</string>
+    <string name="summary_pref_dns_hosts">domain:address,…</string>
+
     <string name="title_pref_proxy_sharing_enabled">Allow connections from the LAN</string>
-    <string name="summary_pref_proxy_sharing_enabled">Other devices can connect to proxy by your ip address through socks/http, Only enable in trusted network to avoid unauthorized connection</string>
-    <string name="toast_warning_pref_proxysharing_short">Allow connections from the LAN, Make sure you are in a trusted network</string>
+    <string name="summary_pref_proxy_sharing_enabled">Other devices can connect to proxy by your IP address through local proxy. Only enable in trusted networks to avoid unauthorized connections</string>
+    <string name="title_pref_allow_insecure">Allow Insecure</string>
+    <string name="summary_pref_allow_insecure">When TLS is selected, allow insecure connections by default</string>
 
-    <string name="title_pref_allow_insecure">allowInsecure</string>
-    <string name="summary_pref_allow_insecure">When TLS, the default allowInsecure</string>
-
-    <string name="title_pref_socks_port">SOCKS5 proxy port</string>
-    <string name="summary_pref_socks_port">SOCKS5 proxy port</string>
-
-    <string name="title_pref_http_port">HTTP proxy port</string>
-    <string name="summary_pref_http_port">HTTP proxy port</string>
+    <string name="title_pref_socks_port">Local proxy port</string>
+    <string name="summary_pref_socks_port">Local proxy port</string>
 
     <string name="title_pref_local_dns_port">Local DNS port</string>
     <string name="summary_pref_local_dns_port">Local DNS port</string>
@@ -163,6 +179,8 @@
 
     <string name="title_pref_start_scan_immediate">Start scanning immediately</string>
     <string name="summary_pref_start_scan_immediate">Open the camera to scan immediately at startup, otherwise you can choose to scan the code or select a photo in the toolbar</string>
+    <string name="title_pref_append_http_proxy">Append HTTP Proxy to VPN</string>
+    <string name="summary_pref_append_http_proxy">HTTP proxy will be used directly from (browser/ some supported apps), without going through the virtual NIC device (Android 10+)</string>
 
     <string name="title_pref_feedback">Feedback</string>
     <string name="summary_pref_feedback">Feedback enhancements or bugs to GitHub</string>
@@ -174,9 +192,8 @@
     <string name="summary_pref_promotion">Promotion,click for details(Donation can be removed)</string>
 
     <string name="title_pref_auto_update_subscription">Automatic update subscriptions</string>
-    <string name="summary_pref_auto_update_subscription">Update your subscriptions automatically with an interval in background. Depending on the device, this feature may not always work</string>
+    <string name="summary_pref_auto_update_subscription">Update your subscriptions automatically at set intervals in the background. Depending on the device, this feature may not always work</string>
     <string name="title_pref_auto_update_interval">Auto Update Interval (Minutes, Min value 15)</string>
-
     <string name="title_core_loglevel">Log Level</string>
     <string name="title_mode">Mode</string>
     <string name="title_mode_help">Click me for more help</string>
@@ -187,15 +204,19 @@
     <string name="logcat_copy">Copy</string>
     <string name="logcat_clear">Clear</string>
     <string name="title_service_restart">Service restart</string>
-    <string name="title_del_all_config">Delete all config</string>
-    <string name="title_del_duplicate_config">Delete duplicate config</string>
-    <string name="title_del_invalid_config">Delete invalid config(Test first)</string>
-    <string name="title_export_all">Export non-custom configs to clipboard</string>
-    <string name="title_sub_setting">Subscription group setting</string>
+    <string name="title_del_all_config">Delete all servers</string>
+    <string name="title_del_duplicate_config">Delete duplicate servers</string>
+    <string name="title_del_invalid_config">Delete invalid servers</string>
+    <string name="title_export_all">Export all servers</string>
+    <string name="title_sub_setting">Subscriptions setting</string>
     <string name="sub_setting_remarks">remarks</string>
     <string name="sub_setting_url">Optional URL</string>
+    <string name="sub_setting_filter">Remarks regular filter</string>
     <string name="sub_setting_enable">Enable update</string>
     <string name="sub_auto_update">Enable automatic update</string>
+    <string name="sub_setting_pre_profile">Previous proxy configuration remarks</string>
+    <string name="sub_setting_next_profile">Next proxy configuration remarks</string>
+    <string name="sub_setting_pre_profile_tip">The configuration remarks exists and is unique</string>
     <string name="title_sub_update">Update subscription</string>
     <string name="title_ping_all_server">Tcping all configuration</string>
     <string name="title_real_ping_all_server">Real delay all configuration</string>
@@ -204,21 +225,40 @@
     <string name="title_filter_config">Filter configuration file</string>
     <string name="filter_config_all">All subscription groups</string>
     <string name="title_del_duplicate_config_count">Delete %d duplicate configurations</string>
+    <string name="title_del_config_count">Delete %d configurations</string>
+    <string name="title_import_config_count">Import %d configurations</string>
+    <string name="title_export_config_count">Export %d configurations</string>
+    <string name="title_update_config_count">Update %d configurations</string>
 
     <string name="tasker_start_service">Start Service</string>
     <string name="tasker_setting_confirm">Confirm</string>
 
-    <string name="routing_settings_title">Routing Settings</string>
-    <string name="routing_settings_tips">Separated by commas(,),remember to save</string>
+    <string name="routing_settings_title">Routing settings</string>
+    <string name="routing_settings_tips">Separated by commas(,), choose domain or ip</string>
     <string name="routing_settings_save">Save</string>
     <string name="routing_settings_delete">Clear</string>
-    <string name="routing_settings_scan_replace">Scan and replace</string>
-    <string name="routing_settings_scan_append">Scan and append</string>
-    <string name="routing_settings_default_rules"> set default routing rules</string>
+    <string name="routing_settings_domain_strategy">Domain strategy</string>
+    <string name="routing_settings_rule_title">Routing Rule Settings</string>
+    <string name="routing_settings_add_rule">Add rule</string>
+    <string name="routing_settings_import_rulesets_from_qrcode">Import ruleset from QRcode</string>
+    <string name="routing_settings_import_predefined_rulesets">Import predefined rulesets</string>
+    <string name="routing_settings_import_rulesets_tip">Existing rulesets will be deleted, are you sure to continue?</string>
+    <string name="routing_settings_import_rulesets_from_clipboard">Import ruleset from clipboard</string>
+    <string name="routing_settings_export_rulesets_to_clipboard">Export ruleset to clipboard</string>
+    <string name="routing_settings_locked">Locked, keep this rule when import presets</string>
+    <string name="routing_settings_domain" translatable="false">Domain</string>
+    <string name="routing_settings_ip" translatable="false">IP</string>
+    <string name="routing_settings_port" translatable="false">Port</string>
+    <string name="routing_settings_protocol" translatable="false">Protocol</string>
+    <string name="routing_settings_protocol_tip" translatable="false">[HTTP,TLS,BitTorrent]</string>
+    <string name="toast_warning_pref_proxysharing_short">Allow connections from the LAN, Make sure you are in a trusted network</string>
+    <string name="routing_settings_network" translatable="false">Network</string>
+    <string name="routing_settings_network_tip" translatable="false">[UDP|TCP]</string>
+    <string name="routing_settings_outbound_tag" translatable="false">Outbound Tag</string>
 
     <string name="connection_test_pending">Check Connectivity</string>
     <string name="connection_test_testing">Testing…</string>
-    <string name="connection_test_available">Success: HTTP connection took %dms</string>
+    <string name="connection_test_available">Success: Connection took %dms</string>
     <string name="connection_test_error">Fail to detect internet connection: %s</string>
     <string name="connection_test_fail">Internet Unavailable</string>
     <string name="connection_test_error_status_code">Error code: #%d</string>
@@ -239,18 +279,11 @@
         <item>Export to clipboard</item>
     </string-array>
 
-    <string-array name="routing_tag">
-        <item>proxy URL or IP</item>
-        <item>direct URL or IP</item>
-        <item>blocked URL or IP</item>
-    </string-array>
-
-    <string-array name="routing_mode">
-        <item>Global proxy</item>
-        <item>Bypassing the LAN address then proxy</item>
-        <item>Bypass mainland address then proxy</item>
-        <item>Bypassing LAN and mainland address then proxy</item>
-        <item>Global direct</item>
+    <string-array name="preset_rulesets">
+        <item>China Whitelist</item>
+        <item>China Blacklist</item>
+        <item>Global</item>
+        <item>Iran Whitelist</item>
     </string-array>
 
     <string-array name="mode_entries">
@@ -264,15 +297,15 @@
     <string name="description">v2ray client with free servers</string>
     <string name="share_app">Share App</string>
     <string name="rate_app">Rate App</string>
-    <string name="error_occurred">an error occurred, please try again later</string>
+    <string name="error_occurred">An error occurred, please try again later</string>
     <string name="support_us">Support Us</string>
     <string name="support_tip">If you find this app useful, please support us by giving your rating</string>
     <string name="later">Later</string>
     <string name="dont_show_again">Don\'t show again</string>
     <string name="other_settings">Other Settings</string>
     <string name="ad_tips">You may be shown a full-page ad next time, thank you for your support.</string>
-    <string name="share_lock">Lock profiles</string>
-    <string name="unlock_sharing">Unlock profiles</string>
+    <string name="share_lock">Lock servers</string>
+    <string name="unlock_sharing">Unlock servers</string>
     <string name="enter_new_pin_code">Enter new pin code:</string>
     <string name="repeat_pin_code">Repeat pin code:</string>
     <string name="lock">Lock</string>
@@ -292,13 +325,160 @@
     <string name="free_servers_update">Free servers update</string>
     <string name="free_servers_updated_successfully">Free servers updated successfully.</string>
     <string name="update_failed">Update failed</string>
-    <string name="update_failed_tip">An error occurred on free servers updating. Please try again later or get in touch with app support.</string>
+    <string name="update_failed_tip">An error occurred on free servers updating. If you are using another VPN please disable it. Please try again later or get in touch with app support.</string>
     <string name="free_servers_try_tip">After connecting to a server, press the speed test button to determine the active servers</string>
     <string name="connect_to_a_server_first">Connect to a server first</string>
     <string name="connect_to_a_server_first_and_test">First, connect to a server and perform a speed test</string>
     <string name="please_wait">Please Wait...</string>
-    <string name="please_wait_tip">The update may take a few minutes.</string>
+    <string name="please_wait_tip">The update may take a few minutes</string>
     <string name="store_mode_active_tip">Shop mode is activated. In this case, besides locking servers, the possibility of updating free servers is also disabled. Please protect the entered PIN code.</string>
     <string name="this_feature_is_currently_unavailable">This feature is currently unavailable</string>
+    <string name="super_speed">(super speed)</string>
+    <string name="good_speed">(good speed)</string>
+    <string name="norma_speed">(normal speed)</string>
+    <string name="poor_speed">(poor speed)</string>
+    <string name="testing_servers">Testing servers</string>
+    <string name="speed_test_tip">Depending on the number of servers, this test may take some time, please be patient until the end of this test. Do not remove or move servers during the test, this will cause errors in the test process.</string>
+    <string name="speed_test_error">Speed test error, try again</string>
+    <string name="speed_test_quick_tip">Please do not remove servers during the test</string>
+    <string name="menu_item_import_config_manually_wireguard">Type manually[Wireguard]</string>
+    <string name="menu_item_import_config_manually_hysteria2">Type manually[Hysteria2]</string>
+    <string name="server_lab_secret_key" translatable="false">SecretKey</string>
+    <string name="server_lab_reserved">Reserved(Optional, separated by commas)</string>
+    <string name="server_lab_local_address">Local address (optional IPv4/IPv6, separated by commas)</string>
+    <string name="server_lab_local_mtu">Mtu(optional, default 1420)</string>
+    <string name="menu_item_add_asset">Add asset</string>
+    <string name="menu_item_add_url">Add URL</string>
+    <string name="menu_item_scan_qrcode">Scan QRcode</string>
+    <string name="title_url" translatable="false">URL</string>
+    <string name="title_user_asset_add_url">Add asset URL</string>
+    <string name="msg_file_not_found">File not found</string>
+    <string name="msg_remark_is_duplicate">The remarks already exists</string>
+    <string name="toast_action_not_allowed">Action not allowed</string>
+    <string name="server_obfs_password">Obfs password</string>
+    <string name="server_lab_port_hop">Port Hopping(will override the port)</string>
+    <string name="server_lab_port_hop_interval">Port Hopping Interval</string>
+    <string name="server_lab_stream_pinsha256">pinSHA256</string>
+    <string name="server_lab_xhttp_mode">XHTTP Mode</string>
+    <string name="server_lab_xhttp_extra">XHTTP Extra raw JSON, format: { XHTTPObject }</string>
+    <string name="title_pref_fragment_packets">Fragment Packets</string>
+    <string name="title_pref_fragment_length">Fragment Length (min-max)</string>
+    <string name="title_pref_fragment_interval">Fragment Interval (min-max)</string>
+    <string name="title_pref_fragment_enabled">Enable Fragment</string>
+    <string name="title_mux_settings">Mux Settings</string>
+    <string name="title_fragment_settings">Fragment Settings</string>
+    <string name="user_guides">User guides</string>
+    <string name="understood">I understood</string>
 
+<string name="user_guides_tip">
+● Free servers: \n \n
+To use free servers, tap the first option in the three-dot menu. \n \n
+A large number of servers will be available to cover a variety of network and internet operators, and depending on your network and internet operator, a percentage of them will be active for you. \n \n
+Then tap the second option in the three-dot menu to start the check. This test will take time (a few minutes), so be patient until the last server is tested. \n \n
+Once the test is complete, active servers will be marked in green and inactive servers in red. \n \n
+\n \n
+● Personal servers: \n \n
+You can easily use your personal or purchased servers in the app. To do this, simply add your personal or purchased configuration to the server list via the + button at the top of the screen. \n \n
+\n \n
+● Server Lock: \n \n
+This app has the ability to lock the server list, which disables the ability to copy, share, or delete servers in the list. \n \n
+To enable this feature, press the Lock Servers option in the three-line menu, enter the desired password in the opened screen, and press the Lock button. \n \n
+To unlock the lock again in the three-line menu, this time press the Unlock option and confirm it by entering the password and pressing the Unlock button. \n \n
+If you want to disable the free server update feature in addition to locking the servers, just hold the Server Lock button on the screen until you enter the password to lock the servers. After this, the store mode will be activated, and in addition to locking the server list, the free server update feature will also be disabled. \n \n
+\n \n
+● Server Groups: \n \n
+You can separate the active servers in each network so that you don\'t have to retry if the internet network changes. To move servers to the WiFi, SIM 1 and SIM 2 groups, touch and hold the desired server for a few moments. \n \n \n \n
+● Smart Connection: \n \n
+You can automatically activate the fastest or least trafficked server for that group by enabling the Smart Connection option in the three-dot menu for each group, and also manage its connection settings in the app settings page. \n \n \n \n
+● Smart Test: \n \n
+In this mode, after testing all servers in the active group, a smart connection is created and activated based on the new test result. You can run this option from time to time to update the status of the servers and get the best connection. \n \n \n \n
+● Language Change: \n \n
+This application supports multiple languages, to change the language of the application, just change the last option on the settings page (application language). \n \n \n \n \n
+● Gold V2ray is a free client application that provides special services to users. \n \n
+Note that servers that are provided to users for free are provided at a high cost and are constantly being updated. We would be happy if you support us with positive ratings and comments on Google Play, and if you have any problems using the app, please send it to us through the feedback section so we can address it.
+</string>
+    <string name="active">Active</string>
+    <string name="test_result">Test result</string>
+    <string name="test_result_tip">The test of all servers has been completed successfully</string>
+    <string name="importing">Importing...</string>
+    <string name="sub_update_error">The update was unsuccessful, please try again in a few minutes. If the error persists, wait for the problem to be fixed in the next version of the app.</string>
+
+    <string name="title_pref_vpn_bypass_lan">Does VPN bypass LAN</string>
+    <string-array name="vpn_bypass_lan">
+        <item>Follow config</item>
+        <item>Bypass</item>
+        <item>Not Bypass</item>
+    </string-array>
+
+    <string name="pull_down_to_refresh">Please pull down to refresh!</string>
+    <string name="server_lab_bandwidth_down">Bandwidth down (units)</string>
+    <string name="server_lab_bandwidth_up">Bandwidth up (units)</string>
+    <string name="menu_item_import_config_local">Import config from locally</string>
+    <string name="per_app_proxy_settings">Per-app proxy</string>
+    <string name="per_app_proxy_settings_enable">Per-app proxy</string>
+    <string name="asset_geo_files_sources">Geo files source (optional)</string>
+    <string name="sub_allow_insecure_url">Allow insecure HTTP address</string>
+    <string name="all">All</string>
+    <string name="free">Free</string>
+    <string name="user">User</string>
+
+    <string name="select_target_group">Move server to category</string>
+    <string name="copy_to_wifi">WiFi</string>
+    <string name="copy_to_sim1">SIM</string>
+    <string name="copy_to_sim2">SIM 2</string>
+    <string name="copied">Copied</string>
+    <string name="server_copied">Server copied successfully</string>
+    <string name="wifi_tab">WiFi</string>
+    <string name="sim1_tab">SIM</string>
+    <string name="sim2_tab">SIM2</string>
+    <string name="server_already_in_this_group">This server is already in this group</string>
+    <string name="server_separate_tip">Touch and hold servers to separate them</string>
+
+    <string name="title_pref_ui_mode_night">UI mode settings</string>
+    <string-array name="ui_mode_night">
+        <item>Follow system</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+    
+    <string name="perapp_dialog_title">Permission Required</string>
+    <string name="perapp_dialog_message">This app collects the list of installed apps on your device to allow you to select which apps should use the proxy feature. This data is not shared with third parties.</string>
+    <string name="perapp_dialog_accept">Accept</string>
+    <string name="perapp_dialog_denied">Not allowed</string>
+    <string name="title_pref_vpn_interface_address">VPN Interface Address</string>
+    <string name="title_core_settings">Core Settings</string>
+    <string name="title_outbound_domain_resolve_method">Outbound domain pre-resolve method</string>
+    <string-array name="outbound_domain_resolve_method">
+        <item>Do not resolve</item>
+        <item>Resolve and add to DNS Hosts</item>
+        <item>Resolve and replace domain</item>
+    </string-array>
+
+    <string name="title_create_intelligent_selection_all_server">Smart Connection</string>
+    <string name="intelligent_selection">Smart Connection</string>
+    <string name="sub_setting_intelligent_selection_filter">Remarks Smart Connection filter</string>
+    <string name="title_intelligent_selection_method">Smart Connection Method</string>
+    <string-array name="intelligent_selection_method">
+        <item>Fastest Ping</item>
+        <item>Least Traffic</item>
+    </string-array>
+
+    <string name="server_lab_mldsa65_verify">Mldsa65Verify</string>
+    <string name="title_pref_use_hev_tunnel">Enable New TUN Feature</string>
+    <string name="summary_pref_use_hev_tunnel">When enabled, TUN will use hev-socks5-tunnel; otherwise, it will use badvpn-tun2socks</string>
+    <string name="title_pref_hev_tunnel_loglevel">Hev Tun Log Level</string>
+    <string name="title_pref_hev_tunnel_rw_timeout">Hev Tun Read/Write Timeout (ms, default 300000)</string>
+    <string name="title_pref_vpn_mtu">VPN MTU (default 1500)</string>
+    <string name="pre_resolving_domain">Pre-resolving domain…</string>
+
+    <string name="title_pref_delay_test_url" translatable="false">True delay test url (http/https)</string>
+    <string name="summary_pref_delay_test_url" translatable="false">Url</string>
+
+    <string name="about_description_mod_version">Mod Version</string>
+    <string name="smart_test">Smart Test</string>
+    <string name="smart_test_tip">After the test is complete, a smart connection is automatically created</string>
+    <string name="smart_connection_updated">Smart Connection updated</string>
+
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
 </resources>

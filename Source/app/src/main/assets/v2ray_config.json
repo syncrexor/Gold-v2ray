@@ -81,7 +81,9 @@
   },
   {
     "protocol": "freedom",
-    "settings": {},
+    "settings": {
+      "domainStrategy": "UseIP"
+    },
     "tag": "direct"
   },
   {
@@ -95,7 +97,7 @@
   }
   ],
   "routing": {
-      "domainStrategy": "IPIfNonMatch",
+      "domainStrategy": "AsIs",
       "rules": []
   },
   "dns": {

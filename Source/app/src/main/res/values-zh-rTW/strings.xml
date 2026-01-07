@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Gold v2ray</string>
     <string name="app_widget_name">開關</string>
     <string name="app_tile_name">開關</string>
     <string name="app_tile_first_use">首次使用此功能，請使用此應用程式新增伺服器</string>
-    <string name="navigation_drawer_open">開啟導覽匣</string>
-    <string name="navigation_drawer_close">關閉導覽匣</string>
     <string name="migration_success">資料遷移成功！</string>
     <string name="migration_fail">資料遷移失敗！</string>
 
     <!-- Notifications -->
     <string name="notification_action_stop_v2ray">停止</string>
     <string name="toast_permission_denied">無法取得此權限</string>
+    <string name="toast_permission_denied_notification">無法取得此通知權限</string>
     <string name="notification_action_more">瞭解更多</string>
     <string name="toast_services_start">啟動服務</string>
     <string name="toast_services_stop">停止服務</string>
@@ -19,22 +17,23 @@
     <string name="toast_services_failure">啟動服務失敗</string>
 
     <!--ServerActivity-->
-    <string name="title_server">組態檔案</string>
-    <string name="menu_item_add_config">新增組態</string>
-    <string name="menu_item_save_config">儲存組態</string>
-    <string name="menu_item_del_config">刪除組態</string>
-    <string name="menu_item_import_config_qrcode">從 QR Code 匯入組態</string>
-    <string name="menu_item_import_config_clipboard">從剪貼簿匯入組態</string>
-    <string name="menu_item_import_config_manually_vmess">手動鍵入 [Vmess]</string>
+    <string name="title_server">設定檔</string>
+    <string name="menu_item_add_config">新增設定</string>
+    <string name="menu_item_save_config">儲存設定</string>
+    <string name="menu_item_del_config">刪除設定</string>
+    <string name="menu_item_import_config_qrcode">從 QR Code 匯入設定</string>
+    <string name="menu_item_import_config_clipboard">從剪貼簿匯入設定</string>
+    <string name="menu_item_import_config_manually_vmess">手動鍵入 [VMess]</string>
     <string name="menu_item_import_config_manually_vless">手動鍵入 [VLESS]</string>
     <string name="menu_item_import_config_manually_ss">手動鍵入 [Shadowsocks]</string>
-    <string name="menu_item_import_config_manually_socks">手動鍵入 [Socks]</string>
+    <string name="menu_item_import_config_manually_socks">手動鍵入 [SOCKS]</string>
+    <string name="menu_item_import_config_manually_http">手動鍵入 [HTTP]</string>
     <string name="menu_item_import_config_manually_trojan">手動鍵入 [Trojan]</string>
-    <string name="menu_item_import_config_custom">自訂組態</string>
-    <string name="menu_item_import_config_custom_clipboard">從剪貼簿匯入自訂組態</string>
-    <string name="menu_item_import_config_custom_local">從本地匯入自訂組態</string>
-    <string name="menu_item_import_config_custom_url">從 URL 匯入自訂組態</string>
-    <string name="menu_item_import_config_custom_url_scan">掃描 URL 匯入自訂組態</string>
+    <string name="menu_item_import_config_custom">自訂設定</string>
+    <string name="menu_item_import_config_custom_clipboard">從剪貼簿匯入自訂設定</string>
+    <string name="menu_item_import_config_custom_local">從本地匯入自訂設定</string>
+    <string name="menu_item_import_config_custom_url">從 URL 匯入自訂設定</string>
+    <string name="menu_item_import_config_custom_url_scan">掃描 URL 匯入自訂設定</string>
     <string name="del_config_comfirm">確定刪除？</string>
     <string name="server_lab_remarks">備註</string>
     <string name="server_lab_address">位址</string>
@@ -46,8 +45,22 @@
     <string name="server_lab_more_function">底層傳輸方式 (transport)</string>
     <string name="server_lab_head_type">標頭類型</string>
     <string name="server_lab_mode_type">gRPC 傳輸模式 (mode)</string>
-    <string name="server_lab_request_host">要求主機 (host)(host/ws host/h2 host)/QUIC 加密方式</string>
-    <string name="server_lab_path">path(ws path/h2 path)/QUIC 加密金鑰/kcp seed/gRPC serviceName</string>
+    <string name="server_lab_request_host">要求主機 (host)</string>
+    <string name="server_lab_request_host_http">http host</string>
+    <string name="server_lab_request_host_ws">ws host</string>
+    <string name="server_lab_request_host_httpupgrade">httpupgrade host</string>
+    <string name="server_lab_request_host_xhttp">xhttp host</string>
+    <string name="server_lab_request_host_h2">h2 host</string>
+    <string name="server_lab_request_host_quic">QUIC 加密方式</string>
+    <string name="server_lab_request_host_grpc">gRPC Authority</string>
+    <string name="server_lab_path">path</string>
+    <string name="server_lab_path_ws">ws path</string>
+    <string name="server_lab_path_httpupgrade">httpupgrade path</string>
+    <string name="server_lab_path_xhttp">xhttp path </string>
+    <string name="server_lab_path_h2">h2 path</string>
+    <string name="server_lab_path_quic">QUIC 加密金鑰</string>
+    <string name="server_lab_path_kcp">kcp seed</string>
+    <string name="server_lab_path_grpc">gRPC serviceName</string>
     <string name="server_lab_stream_security">傳輸層安全 (TLS)</string>
     <string name="server_lab_allow_insecure">跳過憑證驗證 (allowInsecure)</string>
     <string name="server_lab_sni">SNI</string>
@@ -64,19 +77,28 @@
     <string name="toast_none_data">無資料</string>
     <string name="toast_incorrect_protocol">通訊協定不正確</string>
     <string name="toast_decoding_failed">解碼失敗</string>
-    <string name="title_file_chooser">選取一個組態檔</string>
+    <string name="title_file_chooser">選取一個設定檔</string>
     <string name="toast_require_file_manager">請安裝檔案總管。</string>
-    <string name="server_customize_config">自訂組態</string>
-    <string name="toast_config_file_invalid">無效組態</string>
+    <string name="server_customize_config">自訂設定</string>
+    <string name="toast_config_file_invalid">無效設定</string>
     <string name="server_lab_content">內容</string>
     <string name="toast_none_data_clipboard">剪貼簿內無資料</string>
     <string name="toast_invalid_url">URL 無效</string>
+    <string name="toast_insecure_url_protocol">請不要使用不安全的HTTP協定訂閱位址</string>
     <string name="server_lab_need_inbound">​​確保 inbounds port 和設定中的一致</string>
-    <string name="toast_malformed_josn">組態格式不正確</string>
+    <string name="toast_malformed_josn">設定格式不正確</string>
     <string name="server_lab_request_host6">Host(SNI)(可選)</string>
     <string name="toast_asset_copy_failed">失敗，請使用檔案總管</string>
     <string name="menu_item_add_file">新增檔案</string>
+    <string name="menu_item_scan_qrcode">掃描 QRcode</string>
     <string name="menu_item_download_file">下載檔案</string>
+    <string name="toast_action_not_allowed">禁止此項操作</string>
+    <string name="server_obfs_password">混淆密碼</string>
+    <string name="server_lab_port_hop">跳躍連接埠(會覆蓋伺服器連接埠)</string>
+    <string name="server_lab_port_hop_interval">連接埠跳躍間隔(秒)</string>
+    <string name="server_lab_stream_pinsha256">SHA256憑證指紋</string>
+    <string name="server_lab_xhttp_mode">XHTTP 模式</string>
+    <string name="server_lab_xhttp_extra">XHTTP Extra 原始 JSON，格式： { XHTTPObject }</string>
 
     <!-- PerAppProxyActivity -->
     <string name="msg_dialog_progress">載入</string>
@@ -96,9 +118,13 @@
     <string name="title_vpn_settings">VPN 設定</string>
     <string name="title_pref_per_app_proxy">Proxy 個別應用程式</string>
     <string name="summary_pref_per_app_proxy">常規：勾選的 App 啟用 Proxy，未勾選的直接連線；\n繞行模式：勾選的 App 直接連線，未勾選的啟用 Proxy。\n可在選單中選擇自動選中需 Proxy 應用</string>
+    <string name="title_pref_is_booted">開機時自動連線</string>
+    <string name="summary_pref_is_booted">開機時自動連線選擇的伺服器，可能會不成功</string>
 
+    <string name="summary_title_pref_is_bootedpref_per_app_proxy">常规：勾选应用使用代理，不勾选则直连；旁路模式：勾选应用直连，不勾选则代理。菜单中有自动选择代理应用的选项</string>
     <string name="title_pref_mux_enabled">啟用 Mux 多路復用</string>
-    <string name="summary_pref_mux_enabled">減低延時 但可能會斷流\nTCP 默認復用 8 個子鏈接，UDP 及 QUIC 流量處理方式下方可選</string>
+    <string name="summary_pref_mux_enabled">減低延時 但可能會斷流\nTCP，UDP 及 QUIC 流量處理方式下方可選</string>
+    <string name="title_pref_mux_concurency">TCP 復用子鏈接數（可填 -1 至 1024）</string>
     <string name="title_pref_mux_xudp_concurency">XUDP 復用子鏈接數（可填 -1 至 1024）</string>
     <string name="title_pref_mux_xudp_quic">QUIC 流量處理方式</string>
     <string-array name="mux_xudp_quic_entries">
@@ -112,28 +138,28 @@
 
     <string name="title_pref_sniffing_enabled">啟用流量監聽</string>
     <string name="summary_pref_sniffing_enabled">從流量中監聽網域 (預設啟用)</string>
+    <string name="title_pref_route_only_enabled">啟用 routeOnly</string>
+    <string name="summary_pref_route_only_enabled">將嗅探得到的網域只用於路由，代理目標位址仍為 IP</string>
 
     <string name="title_pref_local_dns_enabled">啟用本機 DNS</string>
-    <string name="summary_pref_local_dns_enabled">DNS 請求匯入 core 由 DNS 模塊處理 (建議啟用，如果需要轉送略過區域網路及中國大陸)</string>
+    <string name="summary_pref_local_dns_enabled">DNS 請求匯入 core 由 DNS 模組處理 (建議啟用，如果需要轉送略過區域網路及中國大陸)</string>
 
     <string name="title_pref_fake_dns_enabled">啟用假 DNS</string>
     <string name="summary_pref_fake_dns_enabled">本機退回假解析結果 (減低延時，但個別應用可能無法使用)</string>
 
     <string name="title_pref_prefer_ipv6">IPv6 偏好</string>
-    <string name="summary_pref_prefer_ipv6">App 優先使用 IPv6 位址連線伺服器，同时開啟 VPN 的 IPv6 路由</string>
+    <string name="summary_pref_prefer_ipv6">App 優先使用 IPv6 位址連線伺服器，同時開啟 VPN 的 IPv6 路由</string>
 
-    <string name="title_pref_routing">轉送設定</string>
-    <string name="title_pref_routing_domain_strategy">網域策略</string>
-    <string name="title_pref_routing_mode">轉送模式</string>
-    <string name="title_pref_routing_custom">自訂轉送</string>
-
-    <string name="title_pref_remote_dns">遠端 DNS (可選)</string>
+    <string name="title_pref_remote_dns">遠端DNS (udp/tcp/https/quic)(可選)</string>
     <string name="summary_pref_remote_dns">DNS</string>
 
     <string name="title_pref_vpn_dns">VPN DNS (僅支援 IPv4/v6)</string>
 
     <string name="title_pref_domestic_dns">國內 DNS (可選)</string>
     <string name="summary_pref_domestic_dns">DNS</string>
+
+    <string name="title_pref_dns_hosts">DNS hosts (格式: 網域:位址,…)</string>
+    <string name="summary_pref_dns_hosts">domain:address,…</string>
 
     <string name="title_pref_proxy_sharing_enabled">允許來自區域網路的連線</string>
     <string name="summary_pref_proxy_sharing_enabled">其他裝置可以使用 socks/http 協定透過您的 IP 位址連線到 Proxy，僅在受信任的網路中啟用以避免未經授權的連線</string>
@@ -142,20 +168,19 @@
     <string name="title_pref_allow_insecure">跳過憑證驗證 (allowInsecure)</string>
     <string name="summary_pref_allow_insecure">傳輸層安全選 tls 時，預設跳過憑證驗證 (allowInsecure)</string>
 
-    <string name="title_pref_socks_port">SOCKS5 Proxy 埠</string>
-    <string name="summary_pref_socks_port">SOCKS5 Proxy 埠</string>
-
-    <string name="title_pref_http_port">HTTP Proxy 埠</string>
-    <string name="summary_pref_http_port">HTTP Proxy 埠</string>
+    <string name="title_pref_socks_port">本地 Proxy 埠</string>
+    <string name="summary_pref_socks_port">本地 Proxy 埠</string>
 
     <string name="title_pref_local_dns_port">本機 DNS 埠</string>
     <string name="summary_pref_local_dns_port">本機 DNS 埠</string>
 
-    <string name="title_pref_confirm_remove">刪除配置文件確認</string>
-    <string name="summary_pref_confirm_remove">刪除配置文件是否需要用戶二次確認</string>
+    <string name="title_pref_confirm_remove">刪除設定檔確認</string>
+    <string name="summary_pref_confirm_remove">刪除設定檔是否需要用戶二次確認</string>
 
     <string name="title_pref_start_scan_immediate">立即啟動掃碼</string>
     <string name="summary_pref_start_scan_immediate">啟動時立即打開相機掃描，否則可在工具欄選擇掃碼或選照片</string>
+    <string name="title_pref_append_http_proxy">追加 HTTP 代理至 VPN</string>
+    <string name="summary_pref_append_http_proxy">瀏覽器 / 一些支援的應用 將直接使用 HTTP 代理, 而不經過虛擬網卡設備 (Android 10+)</string>
 
     <string name="title_pref_feedback">意見回饋</string>
     <string name="summary_pref_feedback">前往 GitHub 回報錯誤</string>
@@ -174,40 +199,54 @@
     <string name="title_mode">模式</string>
     <string name="title_mode_help">輕觸以檢視說明</string>
     <string name="title_language">語言</string>
-    <string name="title_ui_settings">用戶界面設置</string>
+    <string name="title_ui_settings">使用者介面設定</string>
 
     <string name="title_logcat">Logcat</string>
     <string name="logcat_copy">複製</string>
     <string name="logcat_clear">清除</string>
-    <string name="title_service_restart">服務重啟</string>
-    <string name="title_del_all_config">刪除全部組態</string>
-    <string name="title_del_duplicate_config">刪除重複組態</string>
-    <string name="title_del_invalid_config">刪除無效組態 (先偵測)</string>
-    <string name="title_export_all">匯出全部 (非自訂) 組態至剪貼簿</string>
+    <string name="title_service_restart">重啟服務</string>
+    <string name="title_del_all_config">刪除目前群組設定</string>
+    <string name="title_del_duplicate_config">刪除目前群組重複設定</string>
+    <string name="title_del_invalid_config">刪除目前群組無效設定</string>
+    <string name="title_export_all">匯出目前群組設定至剪貼簿</string>
     <string name="title_sub_setting">訂閱分組設定</string>
     <string name="sub_setting_remarks">備註</string>
-    <string name="sub_setting_url">Optional URL</string>
+    <string name="sub_setting_url">可選位址(url)</string>
+    <string name="sub_setting_filter">別名正規過濾</string>
     <string name="sub_setting_enable">啟用更新</string>
     <string name="sub_auto_update">啟用自動更新</string>
+    <string name="sub_setting_pre_profile">前置代理設定檔别名</string>
+    <string name="sub_setting_next_profile">落地代理設定檔別名</string>
+    <string name="sub_setting_pre_profile_tip">请确保設定檔别名存在并唯一</string>
     <string name="title_sub_update">更新訂閱</string>
-    <string name="title_ping_all_server">偵測所有組態 Tcping</string>
-    <string name="title_real_ping_all_server">偵測所有組態真延遲</string>
+    <string name="title_ping_all_server">偵測目前群組設定 Tcping</string>
+    <string name="title_real_ping_all_server">偵測目前群組設定真延遲</string>
     <string name="title_user_asset_setting">Geo 資源檔案</string>
     <string name="title_sort_by_test_results">依偵測結果排序</string>
-    <string name="title_filter_config">過濾組態</string>
+    <string name="title_filter_config">過濾設定</string>
     <string name="filter_config_all">所有訂閱分組</string>
-    <string name="title_del_duplicate_config_count">Delete %d duplicate configurations</string>
+    <string name="title_del_duplicate_config_count">删除 %d 个重复配置</string>
 
+    <string name="title_del_config_count">删除 %d 个配置</string>
+    <string name="title_import_config_count">导入 %d 个配置</string>
+    <string name="title_export_config_count">导出 %d 个配置</string>
+    <string name="title_update_config_count">更新 %d 个配置</string>
     <string name="tasker_start_service">啟動服務</string>
     <string name="tasker_setting_confirm">確定</string>
 
     <string name="routing_settings_title">轉送設定</string>
-    <string name="routing_settings_tips">以半形逗號「,」分隔，並手動儲存</string>
+    <string name="routing_settings_tips">以半形逗號「,」分隔,domain和ip二選一填寫</string>
     <string name="routing_settings_save">儲存</string>
     <string name="routing_settings_delete">清除</string>
-    <string name="routing_settings_scan_replace">掃描並取代</string>
-    <string name="routing_settings_scan_append">掃描並附加</string>
-    <string name="routing_settings_default_rules">設定預設轉送規則</string>
+    <string name="routing_settings_domain_strategy">網域策略</string>
+    <string name="routing_settings_rule_title">路由規則設定</string>
+    <string name="routing_settings_add_rule">新增規則</string>
+    <string name="routing_settings_import_rulesets_from_qrcode">從 QRcode 匯入規則集</string>
+    <string name="routing_settings_import_predefined_rulesets">匯入預先定義的規則集</string>
+    <string name="routing_settings_import_rulesets_tip">將刪除現有的規則集，是否確定繼續？ </string>
+    <string name="routing_settings_import_rulesets_from_clipboard">從剪貼簿匯入規則集</string>
+    <string name="routing_settings_export_rulesets_to_clipboard">匯出規則集至剪貼簿</string>
+    <string name="routing_settings_locked">鎖定中，匯入預設時不刪除此規則</string>
 
     <string name="connection_test_pending">"測試連線能力"</string>
     <string name="connection_test_testing">"測試中……"</string>
@@ -221,7 +260,7 @@
     <string-array name="share_method">
         <item>QR Code</item>
         <item>匯出至剪貼簿</item>
-        <item>匯出完整組態至剪貼簿</item>
+        <item>匯出完整設定至剪貼簿</item>
     </string-array>
 
     <string-array name="share_sub_method">
@@ -229,18 +268,11 @@
         <item>匯出至剪貼簿</item>
     </string-array>
 
-    <string-array name="routing_tag">
-        <item>Proxy URL 或 IP</item>
-        <item>直接連線 URL 或 IP</item>
-        <item>已封鎖的 URL 或 IP</item>
-    </string-array>
-
-    <string-array name="routing_mode">
-        <item>全域 Proxy</item>
-        <item>略過區域網路的 Proxy</item>
-        <item>略過中國大陸的 Proxy</item>
-        <item>略過區域網路及中國大陸的 Proxy</item>
-        <item>直接連線</item>
+    <string-array name="preset_rulesets">
+        <item>繞過大陸(Whitelist)</item>
+        <item>黑名單(Blacklist)</item>
+        <item>全域(Global)</item>
+        <item>伊朗(Iran)</item>
     </string-array>
 
     <string-array name="mode_entries">
@@ -261,8 +293,8 @@
     <string name="dont_show_again">不再显示</string>
     <string name="other_settings">其他设置</string>
     <string name="ad_tips">下次您可能会看到整版广告，谢谢您的支持。</string>
-    <string name="share_lock">锁定配置文件</string>
-    <string name="unlock_sharing">解锁个人资料</string>
+    <string name="share_lock">鎖定伺服器</string>
+    <string name="unlock_sharing">解鎖伺服器</string>
     <string name="enter_new_pin_code">输入新的密码：</string>
     <string name="repeat_pin_code">重复 PIN 码：</string>
     <string name="lock">锁</string>
@@ -282,13 +314,147 @@
     <string name="free_servers_update">免费服务器更新</string>
     <string name="free_servers_updated_successfully">免费服务器更新成功。</string>
     <string name="update_failed">更新失败</string>
-    <string name="update_failed_tip">免费服务器更新时发生错误。 请稍后重试或联系应用支持。</string>
+    <string name="update_failed_tip">免费服务器更新时发生错误。 如果您使用其他 VPN，请禁用它。 请稍后重试或联系应用支持。</string>
     <string name="free_servers_try_tip">连接到服务器后，按速度测试按钮以确定活动服务器</string>
     <string name="connect_to_a_server_first">首先连接到服务器</string>
     <string name="connect_to_a_server_first_and_test">首先，连接到服务器并进行速度测试</string>
     <string name="please_wait">请稍等...</string>
-    <string name="please_wait_tip">更新可能需要几分钟。</string>
+    <string name="please_wait_tip">更新可能需要几分钟</string>
     <string name="store_mode_active_tip">商店模式已激活。 在这种情况下，除了锁定服务器之外，更新免费服务器的可能性也被禁用。 请保护输入的 PIN 码。</string>
     <string name="this_feature_is_currently_unavailable">此功能目前无法使用</string>
+    <string name="super_speed">（超高速）</string>
+    <string name="good_speed">（速度不错）</string>
+    <string name="norma_speed">（正常的速度）</string>
+    <string name="poor_speed">（速度很差）</string>
+    <string name="testing_servers">测试服务器</string>
+    <string name="speed_test_tip">根据服务器数量的不同，本次测试可能需要一些时间，请耐心等待本次测试结束。 测试过程中请勿移除或移动服务器，这会导致测试过程出现错误。</string>
+    <string name="speed_test_error">速度测试错误，请重试</string>
+    <string name="speed_test_quick_tip">测试期间请不要移除服务器</string>
+    <string name="menu_item_import_config_manually_wireguard">手動鍵入 [Wireguard]</string>
+    <string name="menu_item_import_config_manually_hysteria2">手動鍵入 [Hysteria2]</string>
+    <string name="server_lab_reserved">Reserved (可選，逗號隔開)</string>
+    <string name="server_lab_local_address">本機位址(可選IPv4/IPv6，逗號隔開)</string>
+    <string name="server_lab_local_mtu">MTU(可選, 預設1420)</string>
+    <string name="title_user_asset_add_url">新增資產網址</string>
+    <string name="msg_file_not_found">文件未找到</string>
+    <string name="msg_remark_is_duplicate">備註已經存在</string>
+    <string name="title_mux_settings">Mux 設定</string>
+    <string name="import_subscription_success">匯入訂閱成功</string>
+    <string name="import_subscription_failure">匯入訂閱失敗</string>
+    <string name="menu_item_add_asset">新增資源</string>
+    <string name="menu_item_add_url">新增連結</string>
+    <string name="title_fragment_settings">分片（Fragment） 設定</string>
+    <string name="title_pref_fragment_packets">分片方式</string>
+    <string name="title_pref_fragment_length">分片包長（最小-最大）</string>
+    <string name="title_pref_fragment_interval">分片間隔（最小-最大）</string>
+    <string name="title_pref_fragment_enabled">啟用分片（Fragment）</string>
+    <string name="user_guides">用户指南</string>
+    <string name="understood">我明白了</string>
+<string name="user_guides_tip">
+● 免費伺服器：\n \n
+要使用免費伺服器，請點擊三點選單中的第一個選項。 \n \n
+將有大量伺服器可供選擇，以覆蓋各種網路和互聯網運營商。根據您的網路和網際網路營運商，其中一定比例的伺服器將處於活動狀態。 \n \n
+然後點擊三點選單中的第二個選項開始檢查。此測試需要一些時間（幾分鐘），因此請耐心等待，直到測試最後一個伺服器。 \n \n
+測試完成後，活動伺服器將標記為綠色，非活動伺服器將標記為紅色。 \n \n
+\n \n
+●個人伺服器：\n \n
+您可以在應用程式中輕鬆使用您的個人或購買的伺服器。為此，只需透過螢幕頂部的「+」按鈕將您的個人或購買的配置新增至伺服器清單即可。 \n \n
+\n \n
+● 伺服器鎖定：\n \n
+此應用程式可以鎖定伺服器列表，從而停用複製、共享或刪除列表中伺服器的功能。 \n \n
+若要啟用此功能，請在三行選單中點選「鎖定伺服器」選項，在開啟的畫面中輸入所需的密碼，然後按下「鎖定」按鈕。 \n \n
+若要在三行選單中再次解鎖，請再次點選「解鎖」選項，然後輸入密碼並按下「解鎖」按鈕進行確認。 \n \n
+如果您除了鎖定伺服器之外還想停用免費伺服器更新功能，只需按住螢幕上的「伺服器鎖定」按鈕，直到輸入鎖定伺服器的密碼即可。此後，商店模式將被激活，除了鎖定伺服器清單外，免費伺服器更新功能也將被停用。 \n \n
+\n \n
+● 伺服器群組：\n \n
+您可以區分每個網路中的活動伺服器，這樣當網路網路發生變化時，您無需重試。若要將伺服器移至 WiFi、SIM 1 和 SIM 2 群組，請觸碰並按住所需的伺服器片刻。 \n \n \n \n
+● 智慧連線：\n \n
+您可以在每個群組的三點功能表中啟用「智慧連線」選項，自動啟用該群組中速度最快或流量最少的伺服器，並在應用程式設定頁面中管理其連線設定。\n \n \n \n
+●智慧測試：\n\n
+在此模式下，系統會在測試活動群組中的所有伺服器後，根據新的測試結果建立並啟動智慧連線。您可以不時運行此選項以更新伺服器狀態並獲得最佳連線。 \n\n\n
+●語言切換：\n \n
+此應用程式支援多種語言，要更改應用程式的語言，只需更改設定頁面（應用程式語言）上的最後一個選項即可。 \n \n \n \n \n
+● Gold V2ray 是一款免費的客戶端應用程序，可為使用者提供特殊服務。 \n \n
+請注意，免費提供給用戶的伺服器價格昂貴，並且會不斷更新。如果您在 Google Play 上給予我們正面的評分和評論，我們將不勝感激。如果您在使用應用程式時遇到任何問題，請透過回饋部分發送給我們，以便我們解決問題。
+</string>
+    <string name="active">积极的</string>
+    <string name="test_result">测试结果</string>
+    <string name="test_result_tip">所有服务器测试均已顺利完成</string>
+    <string name="importing">輸入...</string>
+    <string name="sub_update_error">更新失敗，請幾分鐘後重試。如果錯誤仍然存在，請等待應用程式的下一個版本修復該問題。</string>
 
+    <string name="title_pref_vpn_bypass_lan">VPN是否繞過區域網</string>
+    <string-array name="vpn_bypass_lan">
+        <item>跟隨設定檔</item>
+        <item>繞過</item>
+        <item>不繞過</item>
+    </string-array>
+
+    <string name="pull_down_to_refresh">請下拉刷新!</string>
+    <string name="server_lab_bandwidth_down">頻寬下行 (單位)</string>
+    <string name="server_lab_bandwidth_up">頻寬上行 (單位)</string>
+    <string name="menu_item_import_config_local">從本地匯入</string>
+    <string name="per_app_proxy_settings">每個應用程式的設置</string>
+    <string name="per_app_proxy_settings_enable">啟用每個應用程式</string>
+    <string name="asset_geo_files_sources">Geo 檔案來源 (可選)</string>
+    <string name="sub_allow_insecure_url">允許不安全的 HTTP 位址</string>
+    <string name="server_lab_preshared_key">"預先共用金鑰（可選） "</string>
+    <string name="all">全部</string>
+    <string name="free">自由的</string>
+    <string name="user">使用者</string>
+
+    <string name="select_target_group">將伺服器移至類別</string>
+    <string name="copy_to_wifi">WiFi</string>
+    <string name="copy_to_sim1">SIM</string>
+    <string name="copy_to_sim2">SIM 2</string>
+    <string name="copied">已複製</string>
+    <string name="server_copied">伺服器已成功複製</string>
+    <string name="wifi_tab">WiFi</string>
+    <string name="sim1_tab">SIM</string>
+    <string name="sim2_tab">SIM2</string>
+    <string name="server_already_in_this_group">此伺服器已在此群組中</string>
+    <string name="server_separate_tip">觸摸並按住伺服器以將其分開</string>
+
+    <string name="title_pref_ui_mode_night">介面顯示模式</string>
+    <string-array name="ui_mode_night">
+        <item>跟隨系統</item>
+        <item>淺色</item>
+        <item>深色</item>
+    </string-array>
+
+    <string name="perapp_dialog_title">需要權限</string>
+    <string name="perapp_dialog_message">此應用程式會收集您裝置上已安裝應用程式的列表，以便您選擇哪些應用程式使用代理功能。此資料不會與第三方分享。</string>
+    <string name="perapp_dialog_accept">接受</string>
+    <string name="perapp_dialog_denied">不允許</string>
+    <string name="title_pref_vpn_interface_address">VPN 介面位址</string>
+    <string name="title_core_settings">核心設定</string>
+    <string name="title_outbound_domain_resolve_method">Outbound 網域預解析方式</string>
+    <string-array name="outbound_domain_resolve_method">
+        <item>不解析</item>
+        <item>解析後加入 DNS Hosts</item>
+        <item>解析後替換原網域名稱</item>
+    </string-array>
+
+    <string name="title_create_intelligent_selection_all_server">智慧連線</string>
+    <string name="intelligent_selection">智慧連線</string>
+    <string name="sub_setting_intelligent_selection_filter">備註智慧連線篩選</string>
+    <string name="title_intelligent_selection_method">智慧連線方式</string>
+    <string-array name="intelligent_selection_method">
+        <item>最快延遲</item>
+        <item>最少流量</item>
+    </string-array>
+
+    <string name="server_lab_mldsa65_verify">Mldsa65Verify</string>
+    <string name="title_pref_use_hev_tunnel">啟用新 TUN 功能</string>
+    <string name="summary_pref_use_hev_tunnel">選擇啟用後，TUN 將使用 hev-socks5-tunnel，否則使用 badvpn-tun2socks。</string>
+    <string name="title_pref_hev_tunnel_loglevel">HevTun日誌級別</string>
+    <string name="title_pref_hev_tunnel_rw_timeout">HevTun讀寫超時 (ms, 預設 300000)</string>
+    <string name="title_pref_vpn_mtu">VPN MTU (預設 1500)</string>
+    <string name="pre_resolving_domain">Pre-resolving domain…</string>
+    <string name="about_description_mod_version">修改版</string>
+    <string name="smart_test">智慧測試</string>
+    <string name="smart_test_tip">測試完成後，會自動建立智慧連線。</string>
+    <string name="smart_connection_updated">智慧連線已更新</string>
+    <string name="pause">暫停</string>
+    <string name="resume">恢復</string>
 </resources>

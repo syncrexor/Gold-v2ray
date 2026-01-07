@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.nativead.NativeAdView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/native_ad_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <com.google.android.gms.ads.nativead.MediaView
+            android:id="@+id/native_ad_media"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/native_ad_headline"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeMaxTextSize="14sp"
+            app:autoSizeStepGranularity="1sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:gravity="center_vertical|start"
+            app:layout_constraintStart_toEndOf="@id/native_ad_media"
+            app:layout_constraintEnd_toStartOf="@id/native_ad_cta"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/native_ad_body" />
+
+        <TextView
+            android:id="@+id/native_ad_body"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeMaxTextSize="14sp"
+            app:autoSizeStepGranularity="1sp"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:gravity="center_vertical|start"
+            app:layout_constraintTop_toBottomOf="@id/native_ad_headline"
+            app:layout_constraintStart_toStartOf="@id/native_ad_headline"
+            app:layout_constraintEnd_toStartOf="@+id/native_ad_cta"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/native_ad_app_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="6dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/NativeAdsIconRounded"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/native_ad_cta"
+            app:layout_constraintEnd_toEndOf="@id/native_ad_cta" />
+
+        <Button
+            android:id="@+id/native_ad_cta"
+            android:layout_width="100dp"
+            android:layout_height="42dp"
+            app:autoSizeMaxTextSize="12sp"
+            app:autoSizeMinTextSize="5sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            android:backgroundTint="@color/colorBackgroundDark"
+            android:textColor="@color/colorText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/native_ad_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.gms.ads.nativead.NativeAdView>
