@@ -460,4 +460,6 @@
     <string name="smart_connection_updated">智能连接已更新</string>
     <string name="pause">暂停</string>
     <string name="resume">恢复</string>
+
+    <string name="connection_test_testing_count">正在测试 %d 台服务器……</string>
 </resources>

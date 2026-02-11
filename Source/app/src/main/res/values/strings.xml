@@ -481,4 +481,6 @@ Note that servers that are provided to users for free are provided at a high cos
 
     <string name="pause">Pause</string>
     <string name="resume">Resume</string>
+
+    <string name="connection_test_testing_count">Testing %d servers…</string>
 </resources>

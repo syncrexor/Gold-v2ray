@@ -457,4 +457,6 @@
     <string name="smart_connection_updated">智慧連線已更新</string>
     <string name="pause">暫停</string>
     <string name="resume">恢復</string>
+
+    <string name="connection_test_testing_count">正在測試 %d 台伺服器…</string>
 </resources>

@@ -239,7 +239,7 @@
                             android:layout_height="0dp"
                             android:scrollbars="vertical"
                             android:paddingTop="6dp"
-                            android:paddingBottom="110dp"
+                            android:paddingBottom="220dp"
                             android:clipToPadding="false"
                             android:nestedScrollingEnabled="false"
                             android:nextFocusRight="@+id/fab"
@@ -870,12 +870,16 @@
                     android:layout_marginTop="48dp"
                     android:text="@string/test_result_tip"
                     android:textColor="@color/colorTextLighter"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
                     android:gravity="center" />
 
                 <TextView
+                    android:id="@+id/test_result_mini_tips"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="32dp"
                     android:layout_marginTop="8dp"
                     android:text="@string/server_separate_tip"
                     android:textColor="@color/colorTextLighter"
@@ -883,6 +887,16 @@
                     android:gravity="center" />
 
                 <Button
+                    android:id="@+id/test_result_smartcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorBase"
+                    android:textSize="11sp"
+                    android:text="@string/intelligent_selection"
+                    android:textColor="@color/colorText"/>
+
+                <Button
+                    android:id="@+id/test_result_sortby"
                     android:id="@+id/test_result_confirm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

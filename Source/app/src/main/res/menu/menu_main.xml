@@ -61,8 +61,8 @@
     </item>
 
     <item
-        android:id="@+id/magic_test"
-        android:icon="@drawable/ic_magic_test"
+        android:id="@+id/speed_test"
+        android:icon="@drawable/ic_speed_test"
         android:title="@string/title_ping_all_server"
         app:showAsAction="always" />
 
@@ -106,6 +106,10 @@
     <item
         android:id="@+id/sub_update"
         android:title="@string/title_sub_update"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ping_all"
+        android:title="@string/title_ping_all_server"
         app:showAsAction="never" />
     <item
         android:id="@+id/smart_test"

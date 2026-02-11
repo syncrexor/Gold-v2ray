@@ -453,4 +453,5 @@ Lưu ý rằng các máy chủ được cung cấp miễn phí cho người dùn
     <string name="pause">Tạm dừng</string>
     <string name="resume">Tiếp tục</string>
 
+    <string name="connection_test_testing_count">Đang kiểm tra %d máy chủ…</string>
 </resources>

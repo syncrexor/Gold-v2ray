@@ -153,6 +153,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     private var adsTimerCounter = 0
     private var autoSmartConnectionReq = false
     private var smartConnectionTargetSubscriptionId: String? = null
+    private var isSmartTest = false
 
     private val tabGroupListener = object : TabLayout.OnTabSelectedListener {
         override fun onTabSelected(tab: TabLayout.Tab?) {
@@ -560,10 +561,15 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         test_result_dim.setOnClickListener { testResultHide() }
         val test_result_cancel:Button = findViewById(R.id.test_result_cancel)
         test_result_cancel.setOnClickListener { testResultHide() }
-        val test_result_confirm:Button = findViewById(R.id.test_result_confirm)
+        val test_result_confirm:Button = findViewById(R.id.test_result_sortby)
         test_result_confirm.setOnClickListener {
             testResultHide()
             sortByResult()
+        }
+        val test_result_smartcon:Button = findViewById(R.id.test_result_smartcon)
+        test_result_smartcon.setOnClickListener {
+            testResultHide()
+            autoSmartConnection()
         }
 
         // Share Lock
@@ -610,7 +616,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                     AppConfig.LOCK_PROFILES = false
                     AppConfig.STORE_MODE = false
 
-                    adapter.notifyDataSetChanged()
+                    Handler(Looper.getMainLooper()).post {
+                        adapter.notifyDataSetChanged()
+                    }
 
                     lockSharingChTitle(false)
                     dialogAlert(
@@ -860,7 +868,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             if (index >= 0) {
                 adapter.notifyItemChanged(index)
             } else {
-                adapter.notifyDataSetChanged()
+                Handler(Looper.getMainLooper()).post {
+                    adapter.notifyDataSetChanged()
+                }
             }
         }
         mainViewModel.updateTestResultAction.observe(this) { setTestState(it) }
@@ -1199,8 +1209,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
 
         //GOLDV2RAY
-        R.id.magic_test -> {
-            getServersTest(true)
+        R.id.speed_test -> {
+            isSmartTest = false
+            getServersTest()
             true
         }
 
@@ -1209,14 +1220,22 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             true
         }
 
+        R.id.ping_all -> {
+            toast(getString(R.string.connection_test_testing_count, mainViewModel.serversCache.count()))
+            mainViewModel.testAllTcping()
+            true
+        }
+
         //GOLDV2RAY
         R.id.testing_servers -> {
-            getServersTest(false)
+            isSmartTest = false
+            getServersTest()
             true
         }
 
         R.id.smart_test -> {
-            getServersTest(true)
+            isSmartTest = true
+            getServersTest()
             true
         }
 
@@ -1577,8 +1596,25 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     //GOLDV2RAY
     @SuppressLint("SetTextI18n")
     private fun testResultShow(){
-        val test_result_area:ConstraintLayout = findViewById(R.id.test_result_area)
-        test_result_area.visibility = View.VISIBLE
+        if(isSmartTest){
+            val test_result_mini_tips: TextView = findViewById(R.id.test_result_mini_tips)
+            test_result_mini_tips.setText(getString(R.string.smart_test_tip))
+
+            val test_result_smartcon: Button = findViewById(R.id.test_result_smartcon)
+            test_result_smartcon.visibility = View.GONE
+
+            val test_result_sortby:Button = findViewById(R.id.test_result_sortby)
+            test_result_sortby.visibility = View.GONE
+        } else {
+            val test_result_mini_tips: TextView = findViewById(R.id.test_result_mini_tips)
+            test_result_mini_tips.setText(getString(R.string.server_separate_tip))
+
+            val test_result_smartcon: Button = findViewById(R.id.test_result_smartcon)
+            test_result_smartcon.visibility = View.VISIBLE
+
+            val test_result_sortby:Button = findViewById(R.id.test_result_sortby)
+            test_result_sortby.visibility = View.VISIBLE
+        }
 
         val test_result_value_active:TextView = findViewById(R.id.test_result_value_active)
         test_result_value_active.setText(AppConfig.NUMBER_OF_OK_SERVERS.toString())
@@ -1588,6 +1624,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
         val test_result_value_servers:TextView = findViewById(R.id.test_result_value_servers)
         test_result_value_servers.setText(AppConfig.NUMBER_OF_PASSED_SERVERS.toString() + "/" + AppConfig.NUMBER_OF_ALL_SERVERS.toString())
+
+        val test_result_area:ConstraintLayout = findViewById(R.id.test_result_area)
+        test_result_area.visibility = View.VISIBLE
     }
 
     //GOLDV2RAY
@@ -1597,24 +1636,28 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
         if (autoSmartConnectionReq) {
             autoSmartConnectionReq = false
-
             sortByResult()
+            autoSmartConnection()
+        }
+    }
 
-            val targetSubId = smartConnectionTargetSubscriptionId
-            smartConnectionTargetSubscriptionId = null
-            getSmartConnection(targetSubId)
+    //GOLDV2RAY
+    private fun autoSmartConnection() {
+        val targetSubId = smartConnectionTargetSubscriptionId
+        smartConnectionTargetSubscriptionId = null
+        getSmartConnection(targetSubId)
 
-            binding.recyclerView.post {
-                try {
-                    switchToTabByTag(selectedSubscriptionIdAtTestStart)
-                    binding.recyclerView.scrollToPosition(0)
+        binding.recyclerView.post {
+            try {
+                switchToTabByTag(selectedSubscriptionIdAtTestStart)
+                binding.recyclerView.scrollToPosition(0)
+                onFabClick()
+                lifecycleScope.launch {
+                    delay(300)
                     onFabClick()
-                    lifecycleScope.launch {
-                        delay(300)
-                        onFabClick()
-                    }
-                } catch (e: Exception) {
-                    toast(R.string.connect_to_a_server_first)
+                }
+            } catch (e: Exception) {
+                toast(R.string.connect_to_a_server_first)
                 }
             }
         }
@@ -1726,22 +1769,22 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             // Admob
             val container = findViewById<View>(R.id.ads_container_admob)
             container.visibility = View.GONE
-            //if(AppConfig.ADS_SERVICE.equals("ADMOB")) {
-            //    val container = findViewById<View>(R.id.ads_container_admob)
-            //    val adsBanner = AdView(this)
-            //    val request: AdRequest = AdRequest.Builder().build()
-            //    adsBanner.setAdSize(AdSize.BANNER)
-            //    adsBanner.setAdUnitId(AppConfig.ADMOB_ID_BANNER)
-            //    (container as RelativeLayout).addView(adsBanner)
-            //    adsBanner.loadAd(request)
-            //    adsBanner.adListener = object : AdListener() {
-            //        override fun onAdLoaded() {
-            //            //adsBannerClose?.visibility = View.VISIBLE
-            //            findViewById<View>(R.id.main_ads_area).visibility = View.VISIBLE
-            //            container.visibility = View.VISIBLE
-            //        }
-            //    }
-            //}
+            if(AppConfig.ADS_SERVICE.equals("ADMOB")) {
+                val container = findViewById<View>(R.id.ads_container_admob)
+                val adsBanner = AdView(this)
+                val request: AdRequest = AdRequest.Builder().build()
+                adsBanner.setAdSize(AdSize.BANNER)
+                adsBanner.setAdUnitId(AppConfig.ADMOB_ID_BANNER)
+                (container as RelativeLayout).addView(adsBanner)
+                adsBanner.loadAd(request)
+                adsBanner.adListener = object : AdListener() {
+                    override fun onAdLoaded() {
+                        //adsBannerClose?.visibility = View.VISIBLE
+                        findViewById<View>(R.id.main_ads_area).visibility = View.VISIBLE
+                        container.visibility = View.VISIBLE
+                    }
+                }
+            }
         }
     }
 
@@ -1901,8 +1944,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     //GOLDV2RAY
-    fun getServersTest(smartConnection: Boolean) {
-        autoSmartConnectionReq = smartConnection
+    fun getServersTest() {
+        autoSmartConnectionReq = isSmartTest
 
         val selectedTab = binding.tabGroup.getTabAt(binding.tabGroup.selectedTabPosition)
         selectedSubscriptionIdAtTestStart = selectedTab?.tag as? String
@@ -1911,14 +1954,14 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         val tabTag = selectedTab?.tag as? String
         selectedSubscriptionIdAtTestStart = tabTag
         testingServerList = mainViewModel.serversCache.toList()
-        smartConnectionTargetSubscriptionId = if (smartConnection) {
+        smartConnectionTargetSubscriptionId = if (isSmartTest) {
             normalizeTabTagToSubscriptionId(tabTag)
         } else {
             null
         }
 
         if (mainViewModel.isRunning.value == true) {
-            if (smartConnection) {
+            if (isSmartTest) {
                 toast(R.string.smart_test_tip)
             } else {
                 toast(R.string.speed_test_quick_tip)
@@ -1931,7 +1974,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 binding.recyclerView.scrollToPosition(0)
                 onFabClick()
 
-                if (smartConnection) {
+                if (isSmartTest) {
                     toast(R.string.smart_test_tip)
                 } else {
                     toast(R.string.speed_test_quick_tip)
@@ -2023,7 +2066,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             shp.edit().putString("PIN_CODE", lock_code.value).apply()
             AppConfig.LOCK_PROFILES = true
 
-            adapter.notifyDataSetChanged()
+            Handler(Looper.getMainLooper()).post {
+                adapter.notifyDataSetChanged()
+            }
 
             lockSharingChTitle(true)
             dialogAlert(getString(R.string.congratulations), getString(R.string.lock_sharing_active_tip))
@@ -2036,7 +2081,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             AppConfig.LOCK_PROFILES = true
             AppConfig.STORE_MODE = true
 
-            adapter.notifyDataSetChanged()
+            Handler(Looper.getMainLooper()).post {
+                adapter.notifyDataSetChanged()
+            }
 
             lockSharingChTitle(true)
             dialogAlert(getString(R.string.congratulations), getString(R.string.store_mode_active_tip))

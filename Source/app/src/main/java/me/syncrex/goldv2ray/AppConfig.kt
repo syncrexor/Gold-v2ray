@@ -214,7 +214,7 @@ object AppConfig {
     var FEEDBACK_MAIL = "dev@syncrex.me"
     const val GOOGLEPLAY_URL = "https://play.google.com/store/apps/dev?id=9173889272945325145"
     const val PRIVACYPOLICY_URL = "https://syncrex.me/policy/gold_v2ray/"
-    var ADS_BANNER_STATUS = true
+    var ADS_BANNER_STATUS = false
     var ADS_BANNER_TIMER_HOUR = 0
     var ADS_BANNER_TIMER_MINUTE = 1
     var ADS_INTERSTITIAL_STATUS = true

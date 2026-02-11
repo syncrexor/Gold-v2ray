@@ -423,4 +423,5 @@
     <string name="pause">مکس</string>
     <string name="resume">ادامه</string>
 
+    <string name="connection_test_testing_count">در حال آزمایش %d سرور…</string>
 </resources>

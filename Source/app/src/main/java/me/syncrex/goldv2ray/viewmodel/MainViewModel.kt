@@ -340,12 +340,19 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     //GOLDV2RAY
-    fun createIntelligentSelectionAll(targetSubscriptionId: String) {
+    fun createIntelligentSelectionAll(targetSubscriptionId: String)
+    {
         viewModelScope.launch(Dispatchers.IO) {
+
             deleteOldSmartConnectionsForTab(targetSubscriptionId)
+
+            val serverGuids = synchronized(serversCache) {
+                serversCache.map { it.guid }.toList()
+            }
+
             val key = AngConfigManager.createIntelligentSelection(
                 getApplication<AngApplication>(),
-                serversCache.map { it.guid }.toList(),
+                serverGuids,
                 targetSubscriptionId
             )
 
@@ -436,6 +443,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val target = normalizeSubIdForStorage(targetSubscriptionId)
 
         val allGuids = MmkvManager.decodeServerList().toList()
+
+        val toRemove = mutableListOf<String>()
+
         for (guid in allGuids) {
             val profile = MmkvManager.decodeServerConfig(guid) ?: continue
 
@@ -446,8 +456,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             val profileSubId = normalizeSubIdForStorage(profile.subscriptionId)
 
             if (isSmart && profileSubId == target) {
-                MmkvManager.removeServer(guid)
+                toRemove.add(guid)
             }
+        }
+
+        for (guid in toRemove) {
+            MmkvManager.removeServer(guid)
         }
     }
 }

@@ -419,4 +419,5 @@
     <string name="pause">توقف مؤقت</string>
     <string name="resume">استئناف</string>
 
+    <string name="connection_test_testing_count">اختبار %d خادمًا…</string>
 </resources>
