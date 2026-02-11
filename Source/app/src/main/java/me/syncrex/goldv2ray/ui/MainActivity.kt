@@ -261,42 +261,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         testFailure = findViewById(R.id.test_failure)
         testProgressBar = findViewById(R.id.test_progress_bar)
 
-        // check admob availability
-        val checkAdMobAvailability = Thread {
-            try {
-                val client = OkHttpClient.Builder()
-                    .callTimeout(5, TimeUnit.SECONDS)
-                    .build()
-
-                val request = Request.Builder()
-                    .url("https://googleads.g.doubleclick.net/pagead/id")
-                    .head()
-                    .build()
-
-                val response = client.newCall(request).execute()
-
-                if (response.isSuccessful) {
-                    Log.d("ADebug", "AdMobCheck: AdMob reachable, enabling ADMOB")
-                    AppConfig.ADS_SERVICE = "ADMOB"
-                    shp.edit().putString("ADS_SERVICE", "ADMOB").apply()
-                } else {
-                    Log.d(
-                        "ADebug",
-                        "AdMobCheck: AdMob NOT reachable (code=${response.code}), enabling APPNEXT"
-                    )
-                    AppConfig.ADS_SERVICE = "APPNEXT"
-                    shp.edit().putString("ADS_SERVICE", "APPNEXT").apply()
-                }
-
-            } catch (e: Exception) {
-                Log.d("ADebug", "AdMobCheck: exception -> enabling APPNEXT : $e")
-                AppConfig.ADS_SERVICE = "APPNEXT"
-                shp.edit().putString("ADS_SERVICE", "APPNEXT").apply()
-            }
-        }
-        checkAdMobAvailability.start()
-        //GOLDV2RAY END
-
         binding.fab.setOnClickListener {
             onFabClick()
         }
@@ -430,13 +394,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         //    override fun onInitializeFailed(adNetworks: AdNetworks, adNetworkError: AdNetworkError) {}
         //})
 
-        // AppNext
-        if (shp.getString("ADS_SERVICE", "Admob") == "APPNEXT") {
-            Log.d("ADebug", "ADS_SERVICE = " + "APPNEXT")
-            Appnext.init(applicationContext)
-            bannerShow()
-            //interstitialShow()
-        } else {
             // Admob
             Log.d("ADebug", "ADS_SERVICE = " + "Admob")
             Handler(Looper.getMainLooper()).post {
@@ -595,7 +552,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                     }
                 })
             }
-        }
 
         // Test Result
         val test_result_close:ImageView = findViewById(R.id.test_result_close)
@@ -813,6 +769,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         return when (tabTag) {
             null -> ""
             "manual_profiles" -> "__manual_profiles__"
+            "wifi" -> "__wifi__"
+            "sim1" -> "__sim1__"
+            "sim2" -> "__sim2__"
             else -> tabTag
         }
     }
@@ -1783,26 +1742,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             //        }
             //    }
             //}
-            // APPNEXT
-            val bv = findViewById<BannerView>(R.id.bannerView)
-            bv.visibility = View.GONE
-            if (AppConfig.ADS_SERVICE.equals("APPNEXT")) {
-                bv.apply {
-                    setPlacementId("")
-                    setBannerSize(com.appnext.banners.BannerSize.BANNER)
-                    setBannerListener(object : BannerListener() {
-                        override fun onAdLoaded(s: String?, t: AppnextAdCreativeType?) {
-                            Log.d("ADebug", "Banner Loaded id=$s type=$t")
-                            findViewById<View>(R.id.main_ads_area).visibility = View.VISIBLE
-                            bv.visibility = View.VISIBLE
-                        }
-                        override fun adImpression() { Log.d("ADebug", "Banner Impression") }
-                        override fun onAdClicked() { Log.d("ADebug", "Banner Clicked") }
-                        override fun onError(e: AppnextError?) { Log.w("ADebug", "Banner Error: $e") }
-                    })
-                }
-                bv.loadAd(BannerAdRequest())
-            }
         }
     }
 
@@ -1904,18 +1843,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                                     Log.d("ADebug" ,"interstitial failed to load")
                                 }
                             })
-                    }
-                    if (AppConfig.ADS_SERVICE == "APPNEXT") {
-                        val interstitial_Ad = Interstitial(this, "")
-                        interstitial_Ad.setOnAdLoadedCallback(object : OnAdLoaded {
-                            override fun adLoaded(bannerId: String?, creativeType: com.appnext.core.AppnextAdCreativeType?) {
-                                Log.d("ADebug", "interstitial load successful")
-                                shp.edit().putInt("Ads_Interstitial_Latest_Count", 0).apply()
-                                adsTimerCounter = 0
-                                interstitial_Ad.showAd()
-                            }
-                        })
-                        interstitial_Ad.loadAd()
                     }
                 }
             }

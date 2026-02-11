@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="MissingLeanbackLauncher">
 
-    <uses-sdk android:minSdkVersion="21" tools:overrideLibrary="com.blacksquircle.ui.editorkit" />
+    <uses-sdk android:minSdkVersion="23" tools:overrideLibrary="com.blacksquircle.ui.editorkit" />
 
     <supports-screens
         android:anyDensity="true"
@@ -71,9 +71,6 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_stat_name" />
-        <receiver
-            android:name="com.adivery.sdk.core.UninstallReceiver"
-            tools:node="remove" />
 
         <service
             android:name=".receiver.Firebase"

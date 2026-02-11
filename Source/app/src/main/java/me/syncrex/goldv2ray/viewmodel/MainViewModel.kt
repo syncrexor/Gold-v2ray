@@ -356,7 +356,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     getApplication<AngApplication>().toastSuccess(R.string.smart_connection_updated)
                     MmkvManager.setSelectServer(key)
 
-                    if (targetSubscriptionId == "__manual_profiles__") {
+                    if (targetSubscriptionId.equals("__manual_profiles__")) {
                         showManualProfiles()
                     } else {
                         reloadServerList()

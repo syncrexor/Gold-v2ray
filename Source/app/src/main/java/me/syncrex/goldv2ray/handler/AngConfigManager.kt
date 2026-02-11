@@ -377,7 +377,9 @@ object AngConfigManager {
         fun s(resId: Int, fallback: String) =
             runCatching { context.getString(resId) }.getOrElse { fallback }
         val displaySuffix = when (subid) {
+            ""                    -> s(R.string.all, "All")
             "__manual_profiles__" -> s(R.string.user, "User")
+            "-1"                  -> s(R.string.free, "Free")
             "__wifi__"            -> s(R.string.wifi_tab, "WiFi")
             "__sim1__"            -> s(R.string.sim1_tab, "SIM")
             "__sim2__"            -> s(R.string.sim2_tab, "SIM2")
@@ -386,10 +388,11 @@ object AngConfigManager {
             else                  -> subid
         }
         val title   = s(R.string.intelligent_selection, "Smart Connection")
-        val current = (config.remarks ?: "").trim()
+        /*val current = (config.remarks ?: "").trim()
         if (current.isEmpty() || current.equals(title, ignoreCase = true)) {
             config.remarks = if (displaySuffix.isBlank()) title else "$title: $displaySuffix"
-        }
+        }*/
+        config.remarks = "${AppConfig.SMART_MARKER}$title: $displaySuffix"
         // GOLDV2RAY END
 
         val key = MmkvManager.encodeServerConfig("", config)

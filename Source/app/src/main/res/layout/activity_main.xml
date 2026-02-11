@@ -347,37 +347,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <com.appnext.banners.BannerView
-                    android:id="@+id/bannerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:bannerSize="BANNER"
-                    app:placementId="d5c276e7-aa47-4696-b73e-d1bd99d9a77d"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <!--<com.adivery.sdk.AdiveryBannerAdView
-                    android:id="@+id/ads_container_adivery"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <RelativeLayout
-                    android:id="@+id/ads_container_tapsell"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
+                <!--<ImageView
                     android:id="@+id/main_ads_close"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
