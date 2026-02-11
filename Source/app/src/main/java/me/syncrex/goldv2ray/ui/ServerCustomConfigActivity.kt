@@ -157,4 +157,15 @@ class ServerCustomConfigActivity : BaseActivity() {
         }
         else -> super.onOptionsItemSelected(item)
     }
+
+    //GOLDV2RAY
+    override fun onResume() {
+        try {
+            super.onResume()
+        } catch (e: IllegalArgumentException) {
+            e.printStackTrace()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
 }
