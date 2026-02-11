@@ -616,8 +616,13 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                     AppConfig.LOCK_PROFILES = false
                     AppConfig.STORE_MODE = false
 
-                    Handler(Looper.getMainLooper()).post {
+                    //GOLDV2RAY
+                    if (!binding.recyclerView.isComputingLayout) {
                         adapter.notifyDataSetChanged()
+                    } else {
+                        binding.recyclerView.post {
+                            adapter.notifyDataSetChanged()
+                        }
                     }
 
                     lockSharingChTitle(false)
@@ -866,10 +871,22 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     private fun setupViewModel() {
         mainViewModel.updateListAction.observe(this) { index ->
             if (index >= 0) {
-                adapter.notifyItemChanged(index)
+                // GOLDV2Ray
+                if (!binding.recyclerView.isComputingLayout) {
+                    adapter.notifyItemChanged(index)
+                } else {
+                    binding.recyclerView.post {
+                        adapter.notifyItemChanged(index)
+                    }
+                }
             } else {
-                Handler(Looper.getMainLooper()).post {
+                // GOLDV2Ray
+                if (!binding.recyclerView.isComputingLayout) {
                     adapter.notifyDataSetChanged()
+                } else {
+                    binding.recyclerView.post {
+                        adapter.notifyDataSetChanged()
+                    }
                 }
             }
         }
@@ -1223,6 +1240,20 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         R.id.ping_all -> {
             toast(getString(R.string.connection_test_testing_count, mainViewModel.serversCache.count()))
             mainViewModel.testAllTcping()
+
+            //GOLDV2RAY
+            try {
+                val selectedTab = binding.tabGroup.getTabAt(binding.tabGroup.selectedTabPosition)
+                val tabTag = selectedTab?.tag as? String
+                selectedSubscriptionIdAtTestStart = tabTag
+                testingServerList = mainViewModel.serversCache.toList()
+                isSmartTest = false
+                startTestResultTimer()
+            } catch (e: Exception) {
+                toastError(getString(R.string.error_occurred))
+            }
+            //GOLDV2RAY END
+
             true
         }
 
@@ -1948,8 +1979,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         autoSmartConnectionReq = isSmartTest
 
         val selectedTab = binding.tabGroup.getTabAt(binding.tabGroup.selectedTabPosition)
-        selectedSubscriptionIdAtTestStart = selectedTab?.tag as? String
-        testingServerList = mainViewModel.serversCache.toList()
 
         val tabTag = selectedTab?.tag as? String
         selectedSubscriptionIdAtTestStart = tabTag
@@ -2066,8 +2095,13 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             shp.edit().putString("PIN_CODE", lock_code.value).apply()
             AppConfig.LOCK_PROFILES = true
 
-            Handler(Looper.getMainLooper()).post {
+            //GOLDV2RAY
+            if (!binding.recyclerView.isComputingLayout) {
                 adapter.notifyDataSetChanged()
+            } else {
+                binding.recyclerView.post {
+                    adapter.notifyDataSetChanged()
+                }
             }
 
             lockSharingChTitle(true)
@@ -2081,8 +2115,13 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             AppConfig.LOCK_PROFILES = true
             AppConfig.STORE_MODE = true
 
-            Handler(Looper.getMainLooper()).post {
+            //GOLDV2RAY
+            if (!binding.recyclerView.isComputingLayout) {
                 adapter.notifyDataSetChanged()
+            } else {
+                binding.recyclerView.post {
+                    adapter.notifyDataSetChanged()
+                }
             }
 
             lockSharingChTitle(true)
